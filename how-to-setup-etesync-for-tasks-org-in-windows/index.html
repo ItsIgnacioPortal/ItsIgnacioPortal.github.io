@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+
+    <title>How to setup Etesync for Tasks.org in Windows</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        :root {
+            --button-bg-color: #ffffff;
+            --button-text-color: var(--color-darkgrey);
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=ba3d0b8911" />
+
+    <meta name="description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="ItsIgnacioPortal&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to setup Etesync for Tasks.org in Windows" />
+    <meta property="og:description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
+    <meta property="og:url" content="https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/" />
+    <meta property="article:published_time" content="2023-02-09T12:39:37.000Z" />
+    <meta property="article:modified_time" content="2023-02-09T12:39:54.000Z" />
+    <meta property="article:tag" content="How to" />
+    <meta property="article:tag" content="Windows" />
+    <meta property="article:tag" content="Android" />
+    <meta property="article:tag" content="Tasks" />
+    <meta property="article:tag" content="personalDNSFilter" />
+    <meta property="article:tag" content="Etesync" />
+    <meta property="article:tag" content="Self host" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="How to setup Etesync for Tasks.org in Windows" />
+    <meta name="twitter:description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
+    <meta name="twitter:url" content="https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ignacio J. Perez Portal" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="How to, Windows, Android, Tasks, personalDNSFilter, Etesync, Self host" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "ItsIgnacioPortal&#x27;s Blog",
+        "url": "https://itsignacioportal.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://itsignacioportal.github.io/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ignacio J. Perez Portal",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://itsignacioportal.github.io/content/images/2023/01/Circle.png",
+            "width": 786,
+            "height": 786
+        },
+        "url": "https://itsignacioportal.github.io/author/ignacio/",
+        "sameAs": []
+    },
+    "headline": "How to setup Etesync for Tasks.org in Windows",
+    "url": "https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/",
+    "datePublished": "2023-02-09T12:39:37.000Z",
+    "dateModified": "2023-02-09T12:39:54.000Z",
+    "keywords": "How to, Windows, Android, Tasks, personalDNSFilter, Etesync, Self host",
+    "description": "In this blog I will explain how to set up etesync for local use (a server that\nwill only be exposed to your trusted LAN).\n\nIf you wish to setup etesync for it to be exposed to the internet, an advanced\nguide which uses nginx in WSL and internal port-forwarding is available at \nhttps://github.com/tasks/tasks/issues/1256#issuecomment-1219065064. \n\nSetup etesync for home usage\nInstalling git and python3\nTo start, you will need to install git and python. The easiest way of doing this\nis with chocola",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://itsignacioportal.github.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.48" />
+    <link rel="alternate" type="application/rss+xml" title="ItsIgnacioPortal&#x27;s Blog" href="https://itsignacioportal.github.io/rss/" />
+    
+    <style>
+    /* Hide the Membership aka Subscribe actions etc. */
+    #ghost-portal-root,
+    a[href^="https://ghost.org"],
+    a[href^="#/portal/signup"],
+    .footer-cta { display: none; }
+
+    li.nav-sign-up a { display:none; }
+
+    /* Fix page title */
+    div .gh-head-brand {
+        max-width: 210px;
+    }
+    
+    /*Use a readable font*/
+    p, ul, ol {
+    	font-family: sans-serif !important;
+    }
+    
+    /**Pretty hit counter**/
+    img#hitcounter {
+    	min-width: 100%;
+    }
+    
+     /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+        border-radius: 8px;
+    	background-color: #2e2eb8;;
+    	color: hsla(0,0%,100%,.9);
+    	cursor: pointer;
+    	padding: 14px 18px 18px 18px;
+    	width: 100%;
+    	border: none;
+    	text-align: left;
+    	outline: none;
+    	font-size: 20px;
+		font-weight: bold;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+    	background-color: #1f1f7a;
+		color: hsla(0,0%,100%,.9);
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #23262a;
+    } 
+    
+    /**Fancy icons for the collapse button**/
+    .collapsible:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    
+    /**Prettier selection text**/
+    ::selection, ::selection {
+		background-color: #003d99;
+	}
+    
+</style><style>:root {--ghost-accent-color: #2e2eb8;}</style>
+
+</head>
+<body class="post-template tag-how-to tag-windows tag-android tag-tasks tag-personaldnsfilter tag-etesync tag-self-host">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head has-cover">
+        <nav class="gh-head-inner inner gh-container">
+
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="https://itsignacioportal.github.io">
+                        ItsIgnacioPortal&#x27;s Blog
+                </a>
+                <a class="gh-burger" role="button">
+                    <div class="gh-burger-box">
+                        <div class="gh-burger-inner"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://itsignacioportal.github.io/">Home</a></li>
+    <li class="nav-about"><a href="https://itsignacioportal.github.io/about/">About</a></li>
+</ul>
+
+            </div>
+            <div class="gh-head-actions">
+                <div class="gh-social">
+                </div>
+
+                    <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+    <article class="article post tag-how-to tag-windows tag-android tag-tasks tag-personaldnsfilter tag-etesync tag-self-host no-image ">
+
+        <header class="article-header gh-canvas">
+
+            <section class="article-tag">
+                <a href="https://itsignacioportal.github.io/tag/how-to/">How to</a>
+            </section>
+
+            <h1 class="article-title">How to setup Etesync for Tasks.org in Windows</h1>
+
+
+            <div class="article-byline">
+                <section class="article-byline-content">
+                    <ul class="author-list">
+                        <li class="author-list-item">
+                            <a href="/author/ignacio/" class="author-avatar">
+                                <img class="author-profile-image" src="/content/images/size/w100/2023/01/Circle.png" alt="Ignacio J. Perez Portal" />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="article-byline-meta">
+                        <h4 class="author-name"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></h4>
+                        <div class="byline-meta-content">
+                            <time class="byline-meta-date" datetime="2023-02-09">Feb 9, 2023</time>
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> 6 min read</span>
+                            <a href="https://hits.seeyoufarm.com"><img id="hitcounter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fitsignacioportal.github.io&amp;count_bg=%23454545&amp;title_bg=%2317b595&amp;icon_color=%23E7E7E7&amp;title=Blog%20visitor%20count&amp;edge_flat=true"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </header>
+
+        <section class="gh-content gh-canvas">
+            <p>In this blog I will explain how to set up etesync for local use (a server that will only be exposed to your trusted LAN).</p><p>If you wish to setup etesync for it to be exposed to the internet, an advanced guide which uses nginx in WSL and internal port-forwarding is available at <a href="https://github.com/tasks/tasks/issues/1256#issuecomment-1219065064">https://github.com/tasks/tasks/issues/1256#issuecomment-1219065064</a>. </p><h1 id="setup-etesync-for-home-usage">Setup etesync for home usage</h1><h2 id="installing-git-and-python3">Installing git and python3</h2><p>To start, you will need to install git and python. The easiest way of doing this is with <a href="https://chocolatey.org/">chocolatey</a>, so <a href="https://chocolatey.org/install">open powershell as administrator</a> and run:</p><!--kg-card-begin: markdown--><pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+</code></pre>
+<!--kg-card-end: markdown--><p>After chocolatey has finished installing, close powershell and open it again as administrator. Run:</p><!--kg-card-begin: markdown--><pre><code>choco install git
+choco install python3
+</code></pre>
+<!--kg-card-end: markdown--><h2 id="installing-etesync">Installing etesync</h2><p>We will now setup the etesync server. To do this, go to <a href="https://github.com/ItsIgnacioPortal/etesync-server">my fork of the etesync server</a>, open the Command Prompt (cmd) and run these commands:</p><!--kg-card-begin: markdown--><pre><code>cd %appdata%\..\Local
+mkdir Etesync &amp;&amp; cd Etesync
+git clone https://github.com/etesync/server.git etebase
+setx etesyncpath %appdata%\..\Local\Etesync\
+mkdir etebase_storage &amp;&amp; cd etebase_storage &amp;&amp; mkdir static &amp;&amp; mkdir media
+</code></pre>
+<!--kg-card-end: markdown--><p>Now in an administrator command prompt:</p><!--kg-card-begin: markdown--><pre><code>cd %etesyncpath%\etebase
+pip install -r requirements.txt
+</code></pre>
+<!--kg-card-end: markdown--><p>Now open your favorite text editor and paste this:</p><!--kg-card-begin: markdown--><pre><code>[global]
+secret_file = secret.txt
+debug = false
+;Set the paths where data will be stored at
+static_root = C:\Users\User\AppData\Local\Etesync\etebase_storage\static
+media_root = C:\Users\User\AppData\Local\Etesync\etebase_storage\media
+
+;Advanced options, only uncomment if you know what you're doing:
+;static_url = /static/
+;media_url = /user-media/
+;language_code = en-us
+;time_zone = UTC
+;redis_uri = redis://localhost:6379
+
+[allowed_hosts]
+allowed_host1 = your.local.domain.here.com
+
+[database]
+engine = django.db.backends.sqlite3
+name = db.sqlite3
+
+[database-options]
+; Add engine-specific options here, such as postgresql parameter key words
+
+;[ldap]
+;server = &lt;The URL to your LDAP server&gt;
+;search_base = &lt;Your search base&gt;
+;filter = &lt;Your LDAP filter query. '%%s' will be substituted for the username&gt;
+; In case a cache TTL of 1 hour is too short for you, set `cache_ttl` to the preferred
+; amount of hours a cache entry should be viewed as valid:
+;cache_ttl = 5
+;bind_dn = &lt;Your LDAP &quot;user&quot; to bind as. Must be a bind user&gt;
+; Either specify the password directly, or provide a password file
+;bind_pw = &lt;The password to authenticate as your bind user&gt;
+;bind_pw_file = /path/to/the/file.txt
+</code></pre>
+<!--kg-card-end: markdown--><p>Save it in <strong>C:\Users\User\AppData\Local\Etesync\etebase</strong> (replace your username there) as <strong>etebase-server.ini</strong></p><p>Note that in that file you have to modify the value of "static_root" and "media_root" so it has your correct windows username. Also, here is where we select what domain we'll be using. No, you don't need to register any domains, we'll do all of this locally. But we must pick a domain name for HTTPS to work. So in that file replace "your.local.domain.here.com" with whichever domain name you want.</p><p>Now in the command prompt run:</p><!--kg-card-begin: markdown--><pre><code>python %etesyncpath%\etebase\manage.py migrate
+</code></pre>
+<!--kg-card-end: markdown--><p>We need to tell windows what our domain name is. Open a text editor as administrator and open "C:\Windows\System32\drivers\etc\hosts". Add these lines at the bottom of the file:</p><!--kg-card-begin: markdown--><pre><code>#etesync server
+YOUR-PC-WIFI-IP-ADDRESS your.local.domain.here.com
+</code></pre>
+<!--kg-card-end: markdown--><p>Finally, run:</p><!--kg-card-begin: markdown--><pre><code>cd %etesyncpath%\etebase
+uvicorn etebase_server.asgi:application --host your.local.domain.here.com --port 8001
+</code></pre>
+<!--kg-card-end: markdown--><p>And your server will be live! Though the setup isn't done yet. Press CTRL+C and run these commands to setup some files and create an administrator user (Note: when you type the password, it won't be visible. Be careful with how you type!)</p><!--kg-card-begin: markdown--><pre><code>python %etesyncpath%\etebase\manage.py collectstatic
+python %etesyncpath%\etebase\manage.py createsuperuser
+</code></pre>
+<!--kg-card-end: markdown--><p>Now the setup for the server is done. We now have to setup the web interface. Download this file: <a href="https://pim.etesync.com/etesync-web.tgz" rel="nofollow">https://pim.etesync.com/etesync-web.tgz</a> and extract it in <strong>C:\Users\User\AppData\Local\Etesync\ </strong>so that index.html is at <strong>C:\Users\User\AppData\Local\Etesync\etesync-web\index.html</strong> using 7zip. You'll have to install 7zip if you don't already have it installed:</p><!--kg-card-begin: markdown--><pre><code>choco install 7zip
+</code></pre>
+<!--kg-card-end: markdown--><p>To have HTTPS you must follow <a href="https://devopscube.com/create-self-signed-certificates-openssl/">this tutorial</a>. It's fairly complicated, but it's needed to have a secure connection with our server. After you've generated your rootCA.crt you have to install it in your windows PC, and in your phone.</p><ul><li>Double click your rootCA.crt</li><li>Install certificate...</li><li>Store location -&gt; Local Machine</li><li>Next</li><li>Browse -&gt; "Trusted Root Certification Authorities"</li><li>Then finish the setup</li></ul><p>For android, the setting to install a custom certificate was in Settings -&gt; Security &amp; Location -&gt; (Advanced) -&gt; Encryption &amp; credentials -&gt; Install from SD card (You don't actually need an SD card to use this option).</p><h2 id="start-the-servers">Start the servers:</h2><!--kg-card-begin: markdown--><pre><code>cd %etesyncpath%\etebase
+python -m uvicorn etebase_server.asgi:application --port 8001 --host your.local.domain.here.com --ssl-keyfile=&quot;C:\Users\User\AppData\Local\Etesync\cert\server.key&quot; --ssl-certfile=&quot;C:\Users\User\AppData\Local\Etesync\cert\server.crt&quot;
+</code></pre>
+<!--kg-card-end: markdown--><p>In another terminal:</p><!--kg-card-begin: markdown--><pre><code>cd %etesyncpath%\etesync-web\
+python -m http.server 8002 --bind your.local.domain.here.com
+</code></pre>
+<!--kg-card-end: markdown--><h2 id="setup-groups-and-your-user">Setup groups and your user</h2><p>Now to setup the etesync users go to <strong>https://your.local.domain.here.com:8001/admin</strong> in your browser. There you need to enter the admin credentials you setup earlier.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-login.png" class="kg-image" alt loading="lazy" width="394" height="289"></figure><p>Now you will have to create a group. Go to Groups -&gt; New</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-group.png" class="kg-image" alt loading="lazy" width="629" height="232" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-new-group.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-new-group.png 629w"></figure><p>And now name your group <strong>Etesync users</strong>. Below you have to double click ALL of the options that start with "django_etebase" until they're all in the right side. When you're done click save.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-setup-groups.png" class="kg-image" alt loading="lazy" width="977" height="606" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-setup-groups.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-setup-groups.png 977w" sizes="(min-width: 720px) 720px"></figure><p>Once that's done, click on Users-&gt;New on the left side-bar</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-user.png" class="kg-image" alt loading="lazy" width="281" height="274"></figure><p>Pick a username, then continue. Before continuing to fill the form, set the user's password by clicking on the tiny link on the left:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-password.png" class="kg-image" alt loading="lazy" width="897" height="73" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-new-user_set-password.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-password.png 897w" sizes="(min-width: 720px) 720px"></figure><p>Set your password and hit continue. Fill in your user information, and then add yourself to the "Etesync users" group. Just double click on "Etesync users" in the <em>Available groups</em> menu, then click SAVE.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-groups.png" class="kg-image" alt loading="lazy" width="966" height="418" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-new-user_set-groups.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-groups.png 966w" sizes="(min-width: 720px) 720px"></figure><p>Next we'll create a firewall rule to allow your phone to be able to talk to your etesync server. Open a command prompt as administrator and run:</p><!--kg-card-begin: markdown--><pre><code>netsh advfirewall firewall add rule name= &quot;Etesync TCP&quot; dir=in action=allow protocol=TCP localport=8001
+netsh advfirewall firewall add rule name= &quot;Etesync UDP&quot; dir=in action=allow protocol=UDP localport=8001
+</code></pre>
+<!--kg-card-end: markdown--><p>And that's all done on the PC side! Now for the android setup:</p><h2 id="setup-tasksorg">Setup tasks.org</h2><p>To setup your domain in android, there's several ways. The options available are</p><ul><li><a href="https://pi-hole.net/">pihole</a></li><li><a href="https://nextdns.io/">NextDNS</a></li><li><a href="https://www.zenz-solutions.de/personaldnsfilter-wp/">personalDNSfilter</a></li></ul><p>Since personalDNSfilter doesn't need any external services, and it's open source, that's what I'll use here. Just go through the app setup, and when you're done go to <em>Advanced settings</em> -&gt; <em>Configure additional hosts </em>and add your domain name according to the format explained there:</p><!--kg-card-begin: markdown--><pre><code>&gt;your.local.domain.here.com PC-IP-ADDRESS
+</code></pre>
+<!--kg-card-end: markdown--><p>If you're a NetGuard user, you might have to enable <em>Three dots</em> -&gt; <em>Settings</em> -&gt; <em>Network Options</em> -&gt; <em>Subnet routing. </em>If you would like to use NetGuard and personalDNSfilter at the same time, check my other blogpost: <a href="https://itsignacioportal.github.io/netguard-pdnsf-any-vpn-combo/">How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.</a></p><p>Now go to the <em>Tasks.org app</em> -&gt; <em>Settings</em> -&gt; <em>Add account</em> -&gt; <em>EteSync</em> and then write the username and password that you setup earlier in django. Enable "Show advanced settings" and set the URL to <strong>https://your.local.domain.here.com:8001</strong></p><p>After that hit the save button and you're done! Etesync is up and running. You can access the web interface in your PC on <strong>http://your.local.domain.here.com:8002</strong></p><p>Note that in that page you will also have to enable "Advanced settings" and set the URL to <strong>https://your.local.domain.here.com:8001</strong></p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/etesync-web.png" class="kg-image" alt loading="lazy" width="1343" height="810" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/etesync-web.png 600w, https://itsignacioportal.github.io/content/images/size/w1000/2023/02/etesync-web.png 1000w, https://itsignacioportal.github.io/content/images/2023/02/etesync-web.png 1343w" sizes="(min-width: 720px) 720px"></figure><p>If you're a firefox user you might get stuck in "Deriving encryption". If that's the case, <a href="https://github.com/etesync/etesync-web/issues/237">you have to disable enhanced tracking protection and whitelist your domain in uBlockOrigin</a>.</p><p>Here's how the tasks menu looks as of writing this:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/etesync-web-tasks.png" class="kg-image" alt loading="lazy" width="1343" height="723" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/etesync-web-tasks.png 600w, https://itsignacioportal.github.io/content/images/size/w1000/2023/02/etesync-web-tasks.png 1000w, https://itsignacioportal.github.io/content/images/2023/02/etesync-web-tasks.png 1343w" sizes="(min-width: 720px) 720px"></figure><p>Good luck, hackerman!</p>
+        </section>
+
+        <section class="article-comments gh-canvas">
+            <script src="https://giscus.app/client.js"
+                data-repo="ItsIgnacioPortal/ItsIgnacioPortal.github.io"
+                data-repo-id="R_kgDOHCib7w"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOHCib784COZ-J"
+                data-mapping="pathname"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="dark"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </section>
+
+    </article>
+</main>
+
+
+    <section class="footer-cta ">
+        <div class="inner">
+            <h2>Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+
+            <aside class="read-more-wrap">
+                <div class="read-more inner">
+                        
+<article class="post-card post featured no-image ">
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/netguard-pdnsf-any-vpn-combo/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>Together, with the people over at the personalDNSfilter Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of work profiles. All of this started because I was trying to control Work-profile apps using the Netguard instance that I had on my</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ignacio/" class="static-avatar">
+                        <img class="author-profile-image" src="/content/images/size/w100/2023/01/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
+                <span class="post-card-byline-date"><time datetime="2022-03-24">Mar 24, 2022</time> <span class="bull">&bull;</span> 11 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="https://itsignacioportal.github.io">ItsIgnacioPortal&#x27;s Blog</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=ba3d0b8911"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+<script>
+/**Javascript for the collapsable content button**/
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		if (this.innerHTML.startsWith("Open")){
+			//background-color: #eee;
+			this.innerHTML = this.innerHTML.replace("Open", "Close") 
+		} else {
+			this.innerHTML = this.innerHTML.replace("Close", "Open") 
+		}
+
+		var content = this.nextElementSibling;
+
+		if (content.style.maxHeight){
+			content.style.maxHeight = null;
+		} else {
+			content.style.maxHeight = content.scrollHeight + "px";
+		} 
+	});
+} 
+</script>
+
+</body>
+</html>
