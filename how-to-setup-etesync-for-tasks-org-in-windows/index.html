@@ -238,7 +238,6 @@
                         <div class="byline-meta-content">
                             <time class="byline-meta-date" datetime="2023-02-09">Feb 9, 2023</time>
                             <span class="byline-reading-time"><span class="bull">&bull;</span> 7 min read</span>
-                            <a href="https://hits.seeyoufarm.com"><img id="hitcounter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fitsignacioportal.github.io&amp;count_bg=%23454545&amp;title_bg=%2317b595&amp;icon_color=%23E7E7E7&amp;title=Blog%20visitor%20count&amp;edge_flat=true"></a>
                         </div>
                     </div>
                 </section>
@@ -456,6 +455,18 @@ for (i = 0; i < coll.length; i++) {
 		} 
 	});
 } 
+node = document.createElement("a") 
+node.href = "https://hits.seeyoufarm.com" 
+
+encoded = encodeURIComponent(window.location.href)
+nodeimg = document.createElement("img") 
+nodeimg.id = "hitcounter" 
+nodeimg.src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + encoded + "&count_bg=%23454545&title_bg=%2317b595&icon_color=%23E7E7E7&title=Post%20visitor%20count&edge_flat=true" 
+node.appendChild(nodeimg)
+
+element = document.getElementsByClassName("byline-meta-content")
+element[0].appendChild(node) 
+    
 </script>
 <script src="/assets/js/lib/prism.js"></script>
 
