@@ -15,7 +15,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=75dc236b66" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=d7ff30cb42" />
 
     <meta name="description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -28,7 +28,7 @@
     <meta property="og:description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
     <meta property="og:url" content="https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/" />
     <meta property="article:published_time" content="2023-02-09T12:39:37.000Z" />
-    <meta property="article:modified_time" content="2023-02-09T14:13:45.000Z" />
+    <meta property="article:modified_time" content="2023-02-16T06:21:38.000Z" />
     <meta property="article:tag" content="How to" />
     <meta property="article:tag" content="Windows" />
     <meta property="article:tag" content="Android" />
@@ -76,7 +76,7 @@
     "headline": "How to setup Etesync for Tasks.org in Windows",
     "url": "https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/",
     "datePublished": "2023-02-09T12:39:37.000Z",
-    "dateModified": "2023-02-09T14:13:45.000Z",
+    "dateModified": "2023-02-16T06:21:38.000Z",
     "keywords": "How to, Windows, Android, Tasks, personalDNSFilter, Etesync, Self host",
     "description": "In this blog I will explain how to set up etesync for local use (a server that\nwill only be exposed to your trusted LAN).\n\nIf you wish to setup etesync for it to be exposed to the internet, an advanced\nguide which uses nginx in WSL and internal port-forwarding is available at \nhttps://github.com/tasks/tasks/issues/1256#issuecomment-1219065064. I disliked\nthat setup guide because it was too complicated and resource intensive. The\nsetup that I&#x27;ll explain here uses 0% of CPU and 58.3MB of RAM when ",
     "mainEntityOfPage": {
@@ -252,14 +252,14 @@
 <!--kg-card-end: markdown--><p>After chocolatey has finished installing, close powershell and open it again as administrator. Run:</p><!--kg-card-begin: markdown--><pre><code class="language-powershell">choco install git
 choco install python3
 </code></pre>
-<!--kg-card-end: markdown--><h2 id="installing-etesync">Installing etesync</h2><p>We will now setup the etesync server. To do this, go to <a href="https://github.com/ItsIgnacioPortal/etesync-server">my fork of the etesync server</a>, open the Command Prompt (cmd) and run these commands:</p><!--kg-card-begin: markdown--><pre><code class="language-batch">cd %appdata%\..\Local
+<!--kg-card-end: markdown--><h2 id="installing-etesync">Installing etesync</h2><p>We will now setup the etesync server. To do this, open the Command Prompt (cmd) and run these commands:</p><!--kg-card-begin: markdown--><pre><code class="language-batch">cd %appdata%\..\Local
 mkdir Etesync &amp;&amp; cd Etesync
-git clone https://github.com/etesync/server.git etebase
+git clone https://github.com/ItsIgnacioPortal/etesync-server.git etebase
 setx etesyncpath %appdata%\..\Local\Etesync\
 mkdir etebase_storage &amp;&amp; cd etebase_storage &amp;&amp; mkdir static &amp;&amp; mkdir media
 </code></pre>
-<!--kg-card-end: markdown--><p>Now in an administrator command prompt:</p><pre><code class="language-powershell">cd %etesyncpath%\etebase
-pip install -r requirements.txt</code></pre><p>Now open your favorite text editor and paste this:</p><pre><code class="language-ini">[global]
+<!--kg-card-end: markdown--><p>Note that you're using my fork of the etesync-server repo. If it ever becomes outdated and you wish to get the latest version of the server, just take note of <a href="https://github.com/ItsIgnacioPortal/etesync-server/commits/master/requirements-win.txt">the changes I did in requierements-win.txt</a>, then clone <a href="https://github.com/etesync/server">the main repo</a>, and apply the changes to the requierements.txt</p><p>Now in an administrator command prompt:</p><pre><code class="language-powershell">cd %etesyncpath%\etebase
+pip install -r requirements-win.txt</code></pre><p>Now open your favorite text editor and paste this:</p><pre><code class="language-ini">[global]
 secret_file = secret.txt
 debug = false
 ;Set the paths where data will be stored at
@@ -420,7 +420,7 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=75dc236b66"></script>
+<script src="/assets/built/casper.js?v=d7ff30cb42"></script>
 <script>
 $(document).ready(function () {
     // Mobile Menu Trigger
