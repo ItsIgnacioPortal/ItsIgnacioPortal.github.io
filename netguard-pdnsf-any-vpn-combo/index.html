@@ -15,7 +15,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=1a59aa28fb" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=e8ac667ccb" />
 
     <meta name="description" content="No root or external servers neeeded. Requirements: Android 5.0+, 
 446.03 MB of available storage, a computer and a cable to connect your phone." />
@@ -30,7 +30,7 @@
 446.03 MB of available storage, a computer and a cable to connect your phone." />
     <meta property="og:url" content="https://itsignacioportal.github.io/netguard-pdnsf-any-vpn-combo/" />
     <meta property="article:published_time" content="2022-03-24T06:59:16.000Z" />
-    <meta property="article:modified_time" content="2023-07-09T23:56:45.000Z" />
+    <meta property="article:modified_time" content="2023-07-26T05:51:32.000Z" />
     <meta property="article:tag" content="Privacy" />
     <meta property="article:tag" content="No Root" />
     <meta property="article:tag" content="Android" />
@@ -79,7 +79,7 @@
     "headline": "How to: Netguard, personalDNSFilter and any VPN app at the same time.",
     "url": "https://itsignacioportal.github.io/netguard-pdnsf-any-vpn-combo/",
     "datePublished": "2022-03-24T06:59:16.000Z",
-    "dateModified": "2023-07-09T23:56:45.000Z",
+    "dateModified": "2023-07-26T05:51:32.000Z",
     "keywords": "Privacy, No Root, Android, VPN, NetGuard, personalDNSFilter, pDNSf",
     "description": "Together, with the people over at the personalDNSfilter\n[https://www.zenz-solutions.de/personaldnsfilter-wp/] Telegram group, we&#x27;ve\ndiscovered a way to run multiple &quot;VPN&quot;s at the same time by taking advantage of \nwork profiles [https://developer.android.com/work/managed-profiles].\n\nAll of this started because I was trying to control Work-profile apps using the\nNetguard instance that I had on my main profile.\n\nAfter I read that comment\n[https://forum.xda-developers.com/t/app-6-0-netguard-no-root-",
     "mainEntityOfPage": {
@@ -249,7 +249,7 @@
         </header>
 
         <section class="gh-content gh-canvas">
-            <p>Together, with the people over at the <a href="https://www.zenz-solutions.de/personaldnsfilter-wp/">personalDNSfilter</a> Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of <a href="https://developer.android.com/work/managed-profiles">work profiles</a>.</p><p>All of this started because I was trying to control Work-profile apps using the Netguard instance that I had on my main profile.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/M66B_Netguard-no-work-profile-4.jpg" class="kg-image" alt="Screenshot. M66B saying that netguard has no work-profile support" loading="lazy" width="804" height="432" srcset="https://itsignacioportal.github.io/content/images/size/w600/2022/03/M66B_Netguard-no-work-profile-4.jpg 600w, https://itsignacioportal.github.io/content/images/2022/03/M66B_Netguard-no-work-profile-4.jpg 804w" sizes="(min-width: 720px) 720px"></figure><p>After I read <a href="https://forum.xda-developers.com/t/app-6-0-netguard-no-root-firewall.3233012/post-80571423">that comment</a> from the Netguard dev, I realized that the work profile had a separate VPN slot, so therefor, it's possible for us to have an actual VPN and a SOCKS5 proxy server in the work profile, and then connect to this SOCKS5 proxy from the main profile using NetGuard. Below is a flowchart of how this whole thing is going to work:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2023/01/BbHYaSd.png" class="kg-image" alt loading="lazy" width="2000" height="1092" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/01/BbHYaSd.png 600w, https://itsignacioportal.github.io/content/images/size/w1000/2023/01/BbHYaSd.png 1000w, https://itsignacioportal.github.io/content/images/size/w1600/2023/01/BbHYaSd.png 1600w, https://itsignacioportal.github.io/content/images/size/w2400/2023/01/BbHYaSd.png 2400w" sizes="(min-width: 720px) 720px"><figcaption>A flowchart of how this whole setup works</figcaption></figure><p>Don't worry, the rest of this blog was written in a non-technical way, so it's easy to follow for non-technical people. </p><p>This has been tested on Android 9, on a Moto e6 plus. This blog assumes that you already know:</p><ul><li>How to install an APK</li><li>How to use ADB</li></ul><h2 id="requirements">Requirements</h2><ul><li>Android 5.0+</li><li>446.03 MB (446,030,000 bytes) of available storage</li><li>(Optional, hopefully) A computer and a cable to connect your phone to the computer.</li></ul><p>Why so much storage?</p><!--kg-card-begin: markdown--><table>
+            <p>Together, with the people over at the <a href="https://www.zenz-solutions.de/personaldnsfilter-wp/">personalDNSfilter</a> Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of <a href="https://developer.android.com/work/managed-profiles">work profiles</a>.</p><p>All of this started because I was trying to control Work-profile apps using the Netguard instance that I had on my main profile.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/M66B_Netguard-no-work-profile-4.jpg" class="kg-image" alt="Screenshot. M66B saying that netguard has no work-profile support" loading="lazy" width="804" height="432" srcset="https://itsignacioportal.github.io/content/images/size/w600/2022/03/M66B_Netguard-no-work-profile-4.jpg 600w, https://itsignacioportal.github.io/content/images/2022/03/M66B_Netguard-no-work-profile-4.jpg 804w" sizes="(min-width: 720px) 720px"></figure><p>After I read <a href="https://forum.xda-developers.com/t/app-6-0-netguard-no-root-firewall.3233012/post-80571423">that comment</a> from the Netguard dev, I realized that the work profile had a separate VPN slot, so therefor, it's possible for us to have an actual VPN and a SOCKS5 proxy server in the work profile, and then connect to this SOCKS5 proxy from the main profile using NetGuard. Below is a flowchart of how this whole thing is going to work:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2023/01/BbHYaSd.png" class="kg-image" alt loading="lazy" width="2000" height="1092" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/01/BbHYaSd.png 600w, https://itsignacioportal.github.io/content/images/size/w1000/2023/01/BbHYaSd.png 1000w, https://itsignacioportal.github.io/content/images/size/w1600/2023/01/BbHYaSd.png 1600w, https://itsignacioportal.github.io/content/images/size/w2400/2023/01/BbHYaSd.png 2400w" sizes="(min-width: 720px) 720px"><figcaption>A flowchart of how this whole setup works</figcaption></figure><p>Full-resolution version: <a href="https://imgur.com/a/FDzrffF">https://imgur.com/a/FDzrffF</a></p><p>Don't worry, the rest of this blog was written in a non-technical way, so it's easy to follow for non-technical people. </p><p>This has been tested on Android 9, on a Moto e6 plus. This blog assumes that you already know:</p><ul><li>How to install an APK</li><li>How to use ADB</li></ul><h2 id="requirements">Requirements</h2><ul><li>Android 5.0+</li><li>446.03 MB (446,030,000 bytes) of available storage</li><li>(Optional, hopefully) A computer and a cable to connect your phone to the computer.</li></ul><p>Why so much storage?</p><!--kg-card-begin: markdown--><table>
 <thead>
 <tr>
 <th>Item</th>
@@ -398,7 +398,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=1a59aa28fb"></script>
+<script src="/assets/built/casper.js?v=e8ac667ccb"></script>
 <script>
 $(document).ready(function () {
     // Mobile Menu Trigger
