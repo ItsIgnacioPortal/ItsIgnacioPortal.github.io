@@ -15,7 +15,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=e3e0412d09" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=a5082a7227" />
 
     <meta name="description" content="Thoughts, stories and ideas." />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -142,6 +142,19 @@
     .gist .blob-interaction-bar > input {background: #000}
     .gist .blob-interaction-bar {background: #000}
     .gist-meta{display: none;}
+    
+    .post-card-excerpt p {
+        mask-image: linear-gradient(to bottom, black, transparent 95%);
+        -webkit-mask-image: linear-gradient(to bottom, black, transparent 95%);
+        color: #bfbfbf;
+        padding-top: 3px;
+    }
+
+    .post-card-primary-tag, .article-tag a {
+        color: #0ff !important;
+    }
+
+
 </style><style>:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>
@@ -184,7 +197,7 @@
                 ItsIgnacioPortal&#x27;s Blog
         </h1>
         <p>Thoughts, stories and ideas.</p>
-        <a href="https://hits.seeyoufarm.com"><img id="hitcounter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fitsignacioportal.github.io&amp;count_bg=%23454545&amp;title_bg=%235c5cd6&amp;icon_color=%23E7E7E7&amp;title=Blog%20visitor%20count&amp;edge_flat=true"></a>
+        <a href="https://hits.seeyoufarm.com"><img id="hitcounter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fitsignacioportal.github.io&amp;count_bg=%23454545&amp;title_bg=%235c5cd6&amp;icon_color=%23E7E7E7&amp;title=Homepage%20visitor%20count&amp;edge_flat=true" alt="Homepage visitor counter"></a>
     </div>
 
 <main id="site-main" class="site-main outer">
@@ -289,7 +302,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=e3e0412d09"></script>
+<script src="/assets/built/casper.js?v=a5082a7227"></script>
 <script>
 $(document).ready(function () {
     // Mobile Menu Trigger
@@ -332,10 +345,16 @@ encoded = encodeURIComponent(window.location.href)
 nodeimg = document.createElement("img") 
 nodeimg.id = "hitcounter" 
 nodeimg.src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + encoded + "&count_bg=%23454545&title_bg=%2317b595&icon_color=%23E7E7E7&title=Post%20visitor%20count&edge_flat=true" 
+nodeimg.alt = "Post visitor counter"
 node.appendChild(nodeimg)
 
 element = document.getElementsByClassName("byline-meta-content")
 element[0].appendChild(node) 
+    
+    let burguer = document.getElementsByClassName("gh-burger")[0]
+
+    burguer.ariaLabel="Burger Menu"
+    burguer.tabIndex=0
     
 </script>
 <script src="/assets/js/lib/prism.js"></script>
