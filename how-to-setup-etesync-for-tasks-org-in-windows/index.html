@@ -173,6 +173,7 @@
     .gist .blob-interaction-bar {background: #000}
     .gist-meta{display: none;}
     
+    /*Visible description text*/
     .post-card-excerpt p {
         mask-image: linear-gradient(to bottom, black, transparent 95%);
         -webkit-mask-image: linear-gradient(to bottom, black, transparent 95%);
@@ -180,11 +181,29 @@
         padding-top: 3px;
     }
 
+    /*Visible tags*/
     .post-card-primary-tag, .article-tag a {
         color: #0ff !important;
     }
 
+    /*Readable tables*/
+	tr th {
+    min-width: 75px;
+    }
 
+    /*Prettier homepage*/
+    .site-header-content {
+        max-height: 200px;
+    }
+
+    a#hitcouter-wrap {
+        margin-top: 12px;
+    }
+    
+    /*Disable the white border around profile pictures*/
+    .author-avatar {
+        border: none;
+    }
 </style><style>:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>

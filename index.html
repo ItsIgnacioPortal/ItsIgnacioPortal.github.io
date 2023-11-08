@@ -143,6 +143,7 @@
     .gist .blob-interaction-bar {background: #000}
     .gist-meta{display: none;}
     
+    /*Visible description text*/
     .post-card-excerpt p {
         mask-image: linear-gradient(to bottom, black, transparent 95%);
         -webkit-mask-image: linear-gradient(to bottom, black, transparent 95%);
@@ -150,11 +151,29 @@
         padding-top: 3px;
     }
 
+    /*Visible tags*/
     .post-card-primary-tag, .article-tag a {
         color: #0ff !important;
     }
 
+    /*Readable tables*/
+	tr th {
+    min-width: 75px;
+    }
 
+    /*Prettier homepage*/
+    .site-header-content {
+        max-height: 200px;
+    }
+
+    a#hitcouter-wrap {
+        margin-top: 12px;
+    }
+    
+    /*Disable the white border around profile pictures*/
+    .author-avatar {
+        border: none;
+    }
 </style><style>:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>
@@ -197,7 +216,7 @@
                 ItsIgnacioPortal&#x27;s Blog
         </h1>
         <p>Thoughts, stories and ideas.</p>
-        <a href="https://hits.seeyoufarm.com"><img id="hitcounter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fitsignacioportal.github.io&amp;count_bg=%23454545&amp;title_bg=%235c5cd6&amp;icon_color=%23E7E7E7&amp;title=Homepage%20visitor%20count&amp;edge_flat=true" alt="Homepage visitor counter"></a>
+        <a id="hitcouter-wrap" href="https://hits.seeyoufarm.com"><img id="hitcounter" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fitsignacioportal.github.io&amp;count_bg=%23454545&amp;title_bg=%235c5cd6&amp;icon_color=%23E7E7E7&amp;title=Homepage%20visitor%20count&amp;edge_flat=true" alt="Homepage visitor counter"></a>
     </div>
 
 <main id="site-main" class="site-main outer">
