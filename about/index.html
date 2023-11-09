@@ -15,7 +15,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=ce173fea4f" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=a10050cbb0" />
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://itsignacioportal.github.io/about/" />
@@ -258,8 +258,6 @@
         font-weight: 600;
         font-size: 1.6rem;
     }
-
-
 </style><style>:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>
@@ -273,7 +271,7 @@
                 <a class="gh-head-logo" href="https://itsignacioportal.github.io">
                         ItsIgnacioPortal&#x27;s Blog
                 </a>
-                <a class="gh-burger" role="button">
+                <a class="gh-burger" role="button" aria-label="Menu button">
                     <div class="gh-burger-box">
                         <div class="gh-burger-inner"></div>
                     </div>
@@ -341,7 +339,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=ce173fea4f"></script>
+<script src="/assets/built/casper.js?v=a10050cbb0"></script>
 <script>
 $(document).ready(function () {
     // Mobile Menu Trigger
@@ -386,14 +384,11 @@ nodeimg.id = "hitcounter"
 nodeimg.src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + encoded + "&count_bg=%23454545&title_bg=%2317b595&icon_color=%23E7E7E7&title=Post%20visitor%20count&edge_flat=true" 
 nodeimg.alt = "Post visitor counter"
 node.appendChild(nodeimg)
-
-element = document.getElementsByClassName("byline-meta-content")
-element[0].appendChild(node) 
     
-    let burguer = document.getElementsByClassName("gh-burger")[0]
-
-    burguer.ariaLabel="Burger Menu"
-    burguer.tabIndex=0
+try {
+	element = document.getElementsByClassName("byline-meta-content")
+	element[0].appendChild(node) 	
+} catch (error){}
     
 </script>
 <script src="/assets/js/lib/prism.js"></script>

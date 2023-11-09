@@ -15,7 +15,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=ce173fea4f" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=a10050cbb0" />
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://itsignacioportal.github.io/author/ignacio/" />
@@ -227,8 +227,6 @@
         font-weight: 600;
         font-size: 1.6rem;
     }
-
-
 </style><style>:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>
@@ -242,7 +240,7 @@
                 <a class="gh-head-logo" href="https://itsignacioportal.github.io">
                         ItsIgnacioPortal&#x27;s Blog
                 </a>
-                <a class="gh-burger" role="button">
+                <a class="gh-burger" role="button" aria-label="Menu button">
                     <div class="gh-burger-box">
                         <div class="gh-burger-inner"></div>
                     </div>
@@ -300,10 +298,11 @@
                     <div class="post-card-primary-tag">How to</div>
                 <h2 class="post-card-title">How to setup Etesync for Tasks.org in Windows</h2>
             </header>
-            <div class="post-card-excerpt">
-                <p>In this blog I will explain how to set up etesync for local use (a server that will only be exposed to your trusted LAN). If you wish to setup etesync for it to be exposed to the internet, an advanced guide which uses nginx in WSL and internal port-forwarding</p>
-            </div>
         </a>
+        <div class="post-card-excerpt">
+            <p>In this blog I will explain how to set up etesync for local use (a server that will only be exposed to your trusted LAN). If you wish to setup etesync for it to be exposed to the internet, an advanced guide which uses nginx in WSL and internal port-forwarding</p>
+        </div>
+    
 
         <footer class="post-card-meta">
             <ul class="author-list">
@@ -333,10 +332,11 @@
                     <div class="post-card-primary-tag">Privacy</div>
                 <h2 class="post-card-title">How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.</h2>
             </header>
-            <div class="post-card-excerpt">
-                <p>Together, with the people over at the personalDNSfilter Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of work profiles. All of this started because I was trying to control Work-profile apps using the Netguard instance that I had on my</p>
-            </div>
         </a>
+        <div class="post-card-excerpt">
+            <p>Together, with the people over at the personalDNSfilter Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of work profiles. All of this started because I was trying to control Work-profile apps using the Netguard instance that I had on my</p>
+        </div>
+    
 
         <footer class="post-card-meta">
             <ul class="author-list">
@@ -383,7 +383,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=ce173fea4f"></script>
+<script src="/assets/built/casper.js?v=a10050cbb0"></script>
 <script>
 $(document).ready(function () {
     // Mobile Menu Trigger
@@ -428,14 +428,11 @@ nodeimg.id = "hitcounter"
 nodeimg.src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + encoded + "&count_bg=%23454545&title_bg=%2317b595&icon_color=%23E7E7E7&title=Post%20visitor%20count&edge_flat=true" 
 nodeimg.alt = "Post visitor counter"
 node.appendChild(nodeimg)
-
-element = document.getElementsByClassName("byline-meta-content")
-element[0].appendChild(node) 
     
-    let burguer = document.getElementsByClassName("gh-burger")[0]
-
-    burguer.ariaLabel="Burger Menu"
-    burguer.tabIndex=0
+try {
+	element = document.getElementsByClassName("byline-meta-content")
+	element[0].appendChild(node) 	
+} catch (error){}
     
 </script>
 <script src="/assets/js/lib/prism.js"></script>
