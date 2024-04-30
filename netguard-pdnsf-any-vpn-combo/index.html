@@ -3,7 +3,7 @@
 <head>
 
     <title>How to: Netguard, personalDNSFilter and any VPN app at the same time.</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src https://itsignacioportal.github.io; script-src https://itsignacioportal.github.io https://code.jquery.com https://giscus.app 'sha256-TyzkPRnlqkgMih5qumaDTEUqEasNqkU9m53c7XQplOw=' 'sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc='; style-src https://giscus.app https://itsignacioportal.github.io 'sha256-8aGjwNu6b2DvIOmYm56mdAUDL0bKAYmok/uwFfUSl8Q=' 'sha256-uA3j8BDYAD8GTahyP8jtSHTmonaeWkG7c9pRN9g7V40=' 'sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=' 'sha256-Yp+k198nqFGx1b6dn3RN6hzLayU6iJGufsxgt29cHts='; img-src *; connect-src 'none'; font-src 'none'; object-src 'none'; media-src https://itsignacioportal.github.io https://youtube.com; sandbox allow-scripts allow-forms; child-src https://giscus.app; form-action 'self'; frame-ancestors *; base-uri https://itsignacioportal.github.io; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests; block-all-mixed-content;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src https://itsignacioportal.github.io; script-src https://itsignacioportal.github.io https://code.jquery.com https://giscus.app 'sha256-TyzkPRnlqkgMih5qumaDTEUqEasNqkU9m53c7XQplOw=' 'sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc='; style-src https://giscus.app https://itsignacioportal.github.io 'sha256-8aGjwNu6b2DvIOmYm56mdAUDL0bKAYmok/uwFfUSl8Q=' 'sha256-Wln+EOZ1e8poO3sCxPMIg1EGvRDzFZlmPUc6Rfv56cE=' 'sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=' 'sha256-Yp+k198nqFGx1b6dn3RN6hzLayU6iJGufsxgt29cHts='; img-src *; connect-src 'none'; font-src 'none'; object-src 'none'; media-src https://itsignacioportal.github.io https://youtube.com; sandbox allow-scripts allow-forms; child-src https://itsignacioportal.github.io https://giscus.app; form-action 'self'; frame-ancestors *; base-uri https://itsignacioportal.github.io; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests; block-all-mixed-content;" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
@@ -16,7 +16,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=f8f980ca40" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=b836a0d49a" />
 
     <meta name="description" content="No root or external servers neeeded. Requirements: Android 5.0+, 
 446.03 MB of available storage, a computer and a cable to connect your phone." />
@@ -95,7 +95,7 @@
     <meta name="generator" content="Ghost 4.48" />
     <link rel="alternate" type="application/rss+xml" title="ItsIgnacioPortal&#x27;s Blog" href="https://itsignacioportal.github.io/rss/" />
     
-    <style integrity="sha256-uA3j8BDYAD8GTahyP8jtSHTmonaeWkG7c9pRN9g7V40=">
+    <style integrity="sha256-Wln+EOZ1e8poO3sCxPMIg1EGvRDzFZlmPUc6Rfv56cE=">
     /* Hide the Membership aka Subscribe actions etc. */
     #ghost-portal-root,
     a[href^="https://ghost.org"],
@@ -276,6 +276,39 @@
         font-weight: 600;
         font-size: 1.6rem;
     }
+    
+    .center-horizontally {
+    	margin: auto;
+        display: block;
+    }
+    
+    #github-sponsors-iframe{
+        height: 94px;
+        border-radius: 13px;
+    }
+    
+    @media only screen and (max-width: 763px) {
+        #github-sponsors-iframe{
+			height: 130px;
+        }
+    }
+    
+    @media only screen and (max-width: 552px) {
+        #github-sponsors-iframe{
+			height: 170px;
+        }
+    }
+    @media only screen and (max-width: 347px) {
+        #github-sponsors-iframe{
+			height: 200px;
+        }
+    }
+    @media only screen and (max-width: 330px) {
+        #github-sponsors-iframe{
+			height: 229px;
+        }
+    }
+    
 </style><style integrity="sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=">:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>
@@ -403,6 +436,21 @@
 <!--kg-card-end: markdown--><h1 id="setup">Setup</h1><h2 id="island-or-shelter">Island or Shelter?</h2><p>We must install one of these two apps. <a href="https://reports.exodus-privacy.eu.org/reports/191535/">Island contains Google trackers</a>, but it has a bigger userbase, therefor, less bugs. Meanwhile, Shelter is completely open-source, but has a smaller userbase. For this tutorial I'll be using Island, since that's what I'm currently using, but feel free to use Shelter if you prefer so. </p><p>1) Download the app: <a href="https://play.google.com/store/apps/details?id=com.oasisfeng.island&amp;amp;gl=US">https://play.google.com/store/apps/details?id=com.oasisfeng.island&amp;amp;gl=US</a></p><p>2) Launch the app and follow the setup instructions given by Island.</p><blockquote>On most middle to high end Android devices released after 2016, Island can be setup straightforward without hassle. But still on some devices, you may got “incompatible with your device” message on Google Play Store, or be notified during the setup with error message “Sorry, your device (or ROM) is incompatible with Island”, or other failures. In these cases, Island could probably still work on your device if setup manually.</blockquote><blockquote>If you are prompted to encrypt your device during the setup, it means your device was not pre-encrypted out of box. If you don’t want device decription (which may significantly degrade overall I/O performance on some low-end devices), it can be avoided with manual setup.</blockquote><p>You will need a PC and a cable to connect your phone to your PC if you follow <a href="https://island.oasisfeng.com/setup.html">the manual setup guide</a>.</p><p>While you're at it, you might also want to setup these cool (but not necessary for this guide) features:</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Freeze frequently woken apps.</strong><br>Island allows you to <strong>freeze</strong> any app in the work profile. Freezing an app blocks all its background behaviors. You can even create a launch shortcut for quick de-freezing and launching.<br><br>If you enable <a href="https://island.oasisfeng.com/#managed-mainland">the "Managed mainland" feature</a> you can also freeze apps that are in the main profile. <a href="https://island.oasisfeng.com/setup.html#activate-managed-mainland">Link to setup guide</a>.</div></div><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Give apps fake permissions</strong>. <br><a href="https://appops.rikka.app/">AppOps</a> allows you to set some app permissions to "ignored", which make it so that the app thinks that it does have a permission, but when it tries to actually use it, it doesn't get any data. AppOps has work-profile support.</div></div><h2 id="netguard">Netguard</h2><p>Netguard is a FOSS app that allows us to control exactly which apps have access to the internet, and which don't. We can give an app WiFi access, mobile data access, or make it so that netguard doesn't control the app at all. </p><h3 id="installing-the-app">Installing the app</h3><p>Here, we have two options: Installing from GitHub, or installing from F-Droid. We can't install netguard from the playstore because <strong>the playstore release doesn't support port-forwarding</strong>, and that feature is obligatory for us to be able to do our trick.</p><p>I recommend installing NetGuard from F-Droid, since it's easier to update it from there. If you don't already have an F-Droid client, I recommend using <a href="https://gitlab.com/AuroraOSS/auroradroid/-/releases">AuroraDroid</a>. Simply download the APK file, and install it. After opening the app and finishing the setup, search for "NetGuard" and install the first result.</p><p>I recommend spending some time fine-tweaking which apps you give internet access to. Most apps only ask for internet access to show you ads/collect analytics.</p><h2 id="why-personaldnsfilter">Why personalDNSfilter?</h2><p>The Netguard version from github already has hosts blacklists, so why not use just that? Well, Netguard's host blacklist implementation has a number of <a href="https://github.com/M66B/NetGuard/blob/master/ADBLOCKING.md">drawbacks</a>:</p><blockquote>NetGuard ignores the IP addresses in the hosts file, because it does not route blocked domains to localhost.</blockquote><blockquote>Wildcards are not supported due to performance and battery usage reasons.</blockquote><blockquote>It is not possible to edit the hosts file (change/add/delete domain names) with NetGuard</blockquote><p>Also:</p><ul><li>Host blocklists have to be updated manually.</li><li>You can't view exactly which domains have been blocked.</li><li>You can't create your own custom DNS resolutions: This is necessary if you're into self-hosting and you want HTTPS without a public domain.</li></ul><p><a href="https://www.zenz-solutions.de/personaldnsfilter-wp/">personalDNSfilter</a> overcomes all of these problems, and so for that reason I strongly recommend it.</p><h2 id="installing-personaldnsfilter">Installing personalDNSfilter</h2><p>This one's easy. You can either install it from F-Droid (using AuroraDroid), or you can install it from the playstore. They're both the same.</p><p>After installing the app, tap on "Advanced settings" and make them match this:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/pDNSf-config-1.jpg" class="kg-image" alt="Screenshot of Advanced settings in personalDNSFilter. CNAME Cloaking protection: ON. DNS proxy mode without local VPN: ON. Allow only local DNS proxy requests: ON. Root mode without local VPN: OFF." loading="lazy" width="323" height="391"></figure><p>What we're doing here, is configuring pDNSf so it doesn't use a VPN slot, but instead opens a "DNS proxy" on port 5300. </p><h2 id="installing-the-socks5-proxy">Installing the SOCKS5 proxy</h2><p>Now, you must launch the Google Playstore from within Island:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/island-launching-playstore-1.jpg" class="kg-image" alt="Screenshot of Launching the Google Playstore from within the Island app" loading="lazy" width="325" height="703"></figure><p>Now search and install "Every Proxy". "Every Proxy" has no ads, and no trackers, hence, why I picked it. Make sure NetGuard is up and running on the main profile, and then launch the EveryProxy app, and hit the three dots on the top left corner, then "Settings". Scroll down to the bottom and make your settings match this:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/everyproxy-config-1.jpg" class="kg-image" alt="Screenshot of configuration for the SOCKS5 proxy in Every Proxy. IP Address: 10.1.10.1. Port: 1088. Power save: Off. Auto Start at startup: Off. Enable basic authentication: On. Username: redacted. Password: redacted. More secure: On. " loading="lazy" width="328" height="544"></figure><p>Of course, you must create a username and password. You don't really need to remember the password. Just copy it to your clipboard. (IMPORTANT: DO NOT make the password 126 characters long, else netguard will enter a crash loop that might crash your entire phone). Now go back to the main screen of the app, and start the SOCKS5 proxy. Make sure to disable battery optimizations for "Every Proxy", else Android might kill the app unexpectedly. If you don't know how to disable these optimizations, go to <a href="dontkillmyapp.com">dontkillmyapp.com</a>. </p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2022/03/everyproxy-socks5-started-1.jpg" class="kg-image" alt="Screenshot of Every Proxy with SOCKS5 On." loading="lazy" width="327" height="355"><figcaption>"Every Proxy" with the SOCKS5 proxy activated</figcaption></figure><h2 id="configuring-netguard">Configuring Netguard</h2><p>Now you must go back to your main profile and open Netguard. Do NOT "Deactivate" the work profile.</p><p>Here's the tricky part. Go into NetGuard -&gt; Three Dots (on the top right corner) -&gt; Settings -&gt; Advanced Options -&gt; Port Forwarding</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/netguard-port-forwarding-1.jpg" class="kg-image" alt loading="lazy" width="327" height="260"></figure><p>Once you're inside that menu, click the "<strong>+</strong>" icon on the top right corner. Make the details match the following screenshot:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/netguard-port-forwarding_detail-2.jpg" class="kg-image" alt="Screenshot of netguard configuration. Protocol: TCP. Destination address: 127.0.0.1. Destination port: 5300. Destination app: personalDNSFilter." loading="lazy" width="292" height="459"></figure><p>Click OK. Now do the exact same thing again, but instead of selecting "TCP", select "UDP".</p><p>Basically, what we're doing is configuring netguard so whenever an outbound DNS request goes through port 53, it will be redirected to localhost (127.0.0.1) to port 5300 to personalDNSFilter. We use port 5300 because that's the only port that pDNSf can work on without having root, without occupying the VPN slot.</p><p>Now go back to the main screen of the app. Look for "personalDNSFilter" and untick the "Apply rules and conditions" checkbox:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/netguard-pdnsf-1.jpg" class="kg-image" alt="screenshot of personalDNSfilter being excluded from control by netguard." loading="lazy" width="326" height="191"></figure><p>We do this so that there isn't an infinite DNS loopback: For example, if Google Chrome wants to resolve example.com, then the request will go through NetGuard, which will use 127.0.0.1 as the DNS resolver. pDNSf will resolve it according to its configuration, but when it makes the outbound dns resolution request to it's configured DNS servers, that request will be caught by NetGuard, which will try to resolve it using 127.0.0.1, so pDNSf requests tries to resolve it, but its caught by NetGuard, who tries to resolve it using 127.0.0.1, so pDNSf requests tries to resolve it, and so on and so forth....</p><p>Now we have to configure netguard to use the SOCKS5 proxy. Go to NetGuard -&gt; Three Dots (on the top right corner) -&gt; Settings -&gt; Advanced Options and scroll down to the section about the SOCKS5 Proxies:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/netguard-socks5-1.jpg" class="kg-image" alt="Netguard config screenshot. SOCKS5 address: 10.1.10.1. SOCKS5 port: 1088. Socks5 username: redacted. Socks5 password: redacted." loading="lazy" width="330" height="263"></figure><p>The "SOCKS5 username" and the "SOCKS5 password" must match the username and password that you configured on "Every Proxy".</p><p>Lastly, we have to configure the <em>VPN DNS</em>. Go to "Settings" -&gt; "Advanced Options" and scroll down. Set both "VPN DNS" settings to<strong> any WAN external server </strong>(Avoid "localhost", "127.0.0.1", "10.1.10.1", "192.168.0.1", and such. Copy me if you're not sure on what server to use). It doesn't matter what servers you pick here, your DNS requests won't be sent to these servers. The DNS requests will be redirected to pDNSf thanks to the forwarding rule we setup earlier.</p><p>Why not just put "127.0.0.1" as the VPN DNS you ask? To put it simply, NetGuard has DNS Leaks which can only be avoided using this hacky method. Without this workaround, who our ISP is would be exposed, and nobody wants that!</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/netguard_VPN-DNS.png" class="kg-image" alt loading="lazy" width="325" height="184"></figure><p> If you want more information about how this whole setup works, <a href="https://imgur.com/a/FDzrffF">click here</a>.</p><h2 id="installing-the-actual-vpn">Installing the actual VPN</h2><p>Finally! Just like you installed "Every Proxy" on the work profile, now do the same but instead look for the VPN that you want. In my case, I'll be using ProtonVPN.</p><p>After starting the VPN, if you did everything right, you should see some traffic starting to pop up on your VPN app:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2022/03/protonvpn-1.jpg" class="kg-image" alt="Screenshot of ProtonVPN with traffic coming through." loading="lazy" width="294" height="574"></figure><p>You can verify that the VPN is working by going to any of the following sites with the VPN activated:</p><ul><li><a href="https://whatismyipaddress.com">whatismyipaddress.com</a></li><li><a href="https://browserleaks.org/dns">browserleaks.org/dns</a></li><li><a href="https://whoer.net">whoer.net</a></li></ul><p>Just make sure that your browser is controlled by NetGuard, else it will just bypass the entire system.</p><p>If you wish to <strong>disconnect </strong>from the VPN without dropping any packets, do this, in this specific order:</p><ul><li>Disable "Use SOCKS5 proxy" in NetGuard.</li><li>Stop your VPN app and the SOCKS5 proxy on "Every Proxy" (the order of these two steps doesn't matter, hence why they're combined in a single bullet point).</li><li>"Deactivate" the work profile using the notification from Island.</li></ul>
         </section>
 
+        <div class="gh-canvas">
+        	<div class="center-horizontally">
+        		<br>
+				<hr style="margin-bottom: 2em;">
+				<h2>Having trouble?</h2>
+				<p>For a one-time USD$10 donation you can <b>get one-on-one troubleshooting support</b> for any of my guides/projects. We can schedule a call and fix any issue you may have encoutered regarding usage/deployment of one of my guides. More info in <a href="https://github.com/sponsors/ItsIgnacioPortal?o=esc" style="color: #6BA5FF; text-decoration: underline;">my Github Sponsors profile</a>.</p>
+				<br>
+				<a href="https://github.com/sponsors/ItsIgnacioPortal?o=esc">
+					<iframe class="center-horizontally" id="github-sponsors-iframe" src="/content/media/github-sponsor-card.html" title="Sponsor ItsIgnacioPortal" width="100%"></iframe>
+				</a>
+				<hr>
+        	</div>
+        </div>
+        
+
         <section class="article-comments gh-canvas">
             <script src="https://giscus.app/client.js"
                 data-repo="ItsIgnacioPortal/ItsIgnacioPortal.github.io"
@@ -489,7 +537,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=f8f980ca40"></script>
+<script src="/assets/built/casper.js?v=b836a0d49a"></script>
 <script integrity="sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc=">
 $(document).ready(function () {
     // Mobile Menu Trigger
