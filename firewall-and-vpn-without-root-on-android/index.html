@@ -2,7 +2,7 @@
 <html lang="en" class="dark-mode">
 <head>
 
-    <title>How to setup Etesync for Tasks.org in Windows</title>
+    <title>How to: Firewall + VPN at the same time on Android.</title>
     <meta http-equiv="Content-Security-Policy" content="default-src https://itsignacioportal.github.io; script-src https://itsignacioportal.github.io https://code.jquery.com https://giscus.app 'sha256-TyzkPRnlqkgMih5qumaDTEUqEasNqkU9m53c7XQplOw=' 'sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='; style-src https://giscus.app https://itsignacioportal.github.io 'sha256-8aGjwNu6b2DvIOmYm56mdAUDL0bKAYmok/uwFfUSl8Q=' 'sha256-zOtw5aJI0hYxYQa8yoorwsNdKom4qLcsoCeGcDH+uGA=' 'sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=' 'sha256-Yp+k198nqFGx1b6dn3RN6hzLayU6iJGufsxgt29cHts='; img-src *; connect-src 'none'; font-src 'none'; object-src 'none'; media-src https://itsignacioportal.github.io https://youtube.com; sandbox allow-scripts allow-forms; child-src https://itsignacioportal.github.io https://giscus.app; form-action 'self'; frame-ancestors *; base-uri https://itsignacioportal.github.io; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests; block-all-mixed-content;" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,34 +18,32 @@
 
     <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=65b16d7ed3" />
 
-    <meta name="description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
+    <meta name="description" content="No root or external servers needed. Requirements: Android 5.0+, 
+446.03 MB of available storage, a computer and a cable to connect your phone." />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="canonical" href="https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/" />
+    <link rel="canonical" href="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="ItsIgnacioPortal&#x27;s Blog" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="How to setup Etesync for Tasks.org in Windows" />
-    <meta property="og:description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
-    <meta property="og:url" content="https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/" />
-    <meta property="article:published_time" content="2023-02-09T12:39:37.000Z" />
-    <meta property="article:modified_time" content="2024-04-30T10:25:35.000Z" />
-    <meta property="article:tag" content="How to" />
-    <meta property="article:tag" content="Windows" />
+    <meta property="og:title" content="Privacy guide: Firewall + VPN at the same time on Android." />
+    <meta property="og:description" content="No root or external (self-hosted) servers needed" />
+    <meta property="og:url" content="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/" />
+    <meta property="article:published_time" content="2024-05-09T10:13:14.000Z" />
+    <meta property="article:modified_time" content="2024-05-09T11:28:07.000Z" />
+    <meta property="article:tag" content="Privacy" />
     <meta property="article:tag" content="Android" />
-    <meta property="article:tag" content="Tasks" />
-    <meta property="article:tag" content="personalDNSFilter" />
-    <meta property="article:tag" content="Etesync" />
-    <meta property="article:tag" content="Self host" />
+    <meta property="article:tag" content="No Root" />
+    <meta property="article:tag" content="How to" />
     
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="How to setup Etesync for Tasks.org in Windows" />
-    <meta name="twitter:description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
-    <meta name="twitter:url" content="https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/" />
+    <meta name="twitter:title" content="How to: Firewall + VPN at the same time on Android." />
+    <meta name="twitter:description" content="No root or external (self-hosted) servers needed" />
+    <meta name="twitter:url" content="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Ignacio J. Perez Portal" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="How to, Windows, Android, Tasks, personalDNSFilter, Etesync, Self host" />
+    <meta name="twitter:data2" content="Privacy, Android, No Root, How to" />
     
     <script type="application/ld+json">
 {
@@ -74,12 +72,12 @@
         "url": "https://itsignacioportal.github.io/author/ignacio/",
         "sameAs": []
     },
-    "headline": "How to setup Etesync for Tasks.org in Windows",
-    "url": "https://itsignacioportal.github.io/how-to-setup-etesync-for-tasks-org-in-windows/",
-    "datePublished": "2023-02-09T12:39:37.000Z",
-    "dateModified": "2024-04-30T10:25:35.000Z",
-    "keywords": "How to, Windows, Android, Tasks, personalDNSFilter, Etesync, Self host",
-    "description": "In this blog I will explain how to set up etesync for local use (a server that\nwill only be exposed to your trusted LAN).\n\nIf you wish to setup etesync for it to be exposed to the internet, an advanced\nguide which uses nginx in WSL and internal port-forwarding is available at \nhttps://github.com/tasks/tasks/issues/1256#issuecomment-1219065064. I disliked\nthat setup guide because it was too complicated and resource intensive. The\nsetup that I&#x27;ll explain here uses 0% of CPU and 58.3MB of RAM when ",
+    "headline": "How to: Firewall + VPN at the same time on Android.",
+    "url": "https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/",
+    "datePublished": "2024-05-09T10:13:14.000Z",
+    "dateModified": "2024-05-09T11:28:07.000Z",
+    "keywords": "Privacy, Android, No Root, How to",
+    "description": "For this guide we&#x27;ll be using Insular, RethinkDNS and Sing-box. \n\nThis is an updated version of the “How to use NetGuard + personalDNSFilter+ Any\nVPN, without root, without external self-hosted servers.\n[https://itsignacioportal.github.io/netguard-pdnsf-any-vpn-combo/]” guide.\n\nUnlike the previous version of this guide, this setup has:\n\n * No DNS leaks.\n * No UDP leaks.\n * Less battery usage.\n * Only open-source software.\n\nRequirements\n * Android 5.0+\n * Anywhere between 446.03 MB, up to 2500MB ",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://itsignacioportal.github.io/"
@@ -313,7 +311,7 @@
 </style><style integrity="sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=">:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>
-<body class="post-template tag-how-to tag-windows tag-android tag-tasks tag-personaldnsfilter tag-etesync tag-self-host">
+<body class="post-template tag-privacy tag-android tag-no-root tag-how-to">
 <div class="viewport">
 
     <header id="gh-head" class="gh-head has-cover">
@@ -351,15 +349,15 @@
 
 
 <main id="site-main" class="site-main">
-    <article class="article post tag-how-to tag-windows tag-android tag-tasks tag-personaldnsfilter tag-etesync tag-self-host no-image ">
+    <article class="article post tag-privacy tag-android tag-no-root tag-how-to no-image ">
 
         <header class="article-header gh-canvas">
 
             <section class="article-tag">
-                <a href="https://itsignacioportal.github.io/tag/how-to/">How to</a>
+                <a href="https://itsignacioportal.github.io/tag/privacy/">Privacy</a>
             </section>
 
-            <h1 class="article-title">How to setup Etesync for Tasks.org in Windows</h1>
+            <h1 class="article-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers.</h1>
 
 
             <div class="article-byline">
@@ -374,8 +372,8 @@
                     <div class="article-byline-meta">
                         <p class="author-name"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></h4>
                         <div class="byline-meta-content">
-                            <time class="byline-meta-date" datetime="2023-02-09">Feb 9, 2023</time>
-                            <span class="byline-reading-time"><span class="bull">&bull;</span> 7 min read</span>
+                            <time class="byline-meta-date" datetime="2024-05-09">May 9, 2024</time>
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> 8 min read</span>
                         </div>
                     </div>
                 </section>
@@ -384,81 +382,44 @@
         </header>
 
         <section class="gh-content gh-canvas">
-            <p>In this blog I will explain how to set up etesync for local use (a server that will only be exposed to your trusted LAN).</p><p>If you wish to setup etesync for it to be exposed to the internet, an advanced guide which uses nginx in WSL and internal port-forwarding is available at <a href="https://github.com/tasks/tasks/issues/1256#issuecomment-1219065064">https://github.com/tasks/tasks/issues/1256#issuecomment-1219065064</a>. I disliked that setup guide because it was too complicated and resource intensive. The setup that I'll explain here uses 0% of CPU and 58.3MB of RAM when the server is idle, and up to 0.6% of CPU when it's working (I have a Intel Core i7-4702MQ CPU @ 2.20GHz). This setup is very lightweight.</p><h1 id="setup-etesync-for-home-usage">Setup etesync for home usage</h1><h2 id="installing-git-and-python3">Installing git and python3</h2><p>To start, you will need to install git and python. The easiest way of doing this is with <a href="https://chocolatey.org/">chocolatey</a>, so <a href="https://chocolatey.org/install">open powershell as administrator</a> and run:</p><!--kg-card-begin: markdown--><pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+            <p>For this guide we'll be using <strong>Insular</strong>, <strong>RethinkDNS </strong>and <strong>Sing-box</strong>. </p><p>This is an updated version of the “<a href="https://itsignacioportal.github.io/netguard-pdnsf-any-vpn-combo/">How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.</a>” guide.</p><p>Unlike the previous version of this guide, this setup has:</p><ul><li>No DNS leaks.</li><li>No UDP leaks.</li><li>Less battery usage.</li><li>Only open-source software.</li></ul><h2 id="requirements">Requirements</h2><ul><li>Android 5.0+</li><li>Anywhere between 446.03 MB, up to 2500MB of available storage.</li><li>(Optional, hopefully) A computer and a cable to connect your phone to the computer.</li></ul><p>Why so much storage? Well, we'll be using 4 different applications and the Android work-profile to make this entire setup work. The Android work-profile occupies varying amounts of storage depending on the Android OS version.</p><p>This is what we're going to do: </p><ol><li>Install <strong>RethinkDNS</strong> in the Main Android Profile.</li><li>Create an Android work-profile using <strong>Insular</strong>.</li><li>Install <strong>Sing-box</strong> in the work-profile and configure it so that it can host a SOCKS5 proxy server.</li><li>Configure RethinkDNS so it forwards all requests through the Sing-box SOCKS5 proxy server.</li><li>Install a VPN app in the work-profile.</li><li>Start the Sing-box SOCKS5 Proxy.</li><li>Start RethinkDNS.</li><li>Start the VPN.</li></ol><p>This setup has been manually tested against DNS Leaks and UDP Leaks, and it's demonstrated safe-to-use.</p><h1 id="setup">Setup</h1><h2 id="insular-or-shelter">Insular or Shelter?</h2><p>The first step is setting up an Android Work Profile. Currently the only open-source options available are Insular (a fork of Islan) and Shelter. For this tutorial I'll be using Insular because in my experience Shelter doesn't work very well in Android 12 devices, but feel free to use Shelter anyway if you prefer so. </p><!--kg-card-begin: html--> <button type="button" class="collapsible">What is an Android "Work Profile"?</button>
+<div class="content gh-content"><!--kg-card-end: html--><h3 id="android-work-profiles">Android Work Profiles</h3><p><a href="https://play.google.com/store/apps/details?id=com.oasisfeng.island">Island</a>, <a href="https://f-droid.org/packages/com.oasisfeng.island.fdroid/">Insular</a> and <a href="https://play.google.com/store/apps/details?id=net.typeblog.shelter&amp;amp;gl=US">Shelter</a> are apps which take advantage of <a href="https://developer.android.com/work/managed-profiles">Android's work-profile</a>  in order to create a "sandbox"; Using this sandbox, we can give privacy invasive apps their own "private data pools", aka, their own storage for:</p><ul><li>SMS History</li><li>Call History</li><li>File Storage</li></ul><p>Having a separate profile on android also allows you to have multiple versions of a single app running simultaneously without modifying the app's APK. In contrast to other "parallel apps" apps, this approach allows us to easily get security updates from the playstore, as the app doesn't have to be re-signed in the first place.</p><p>There's also the benefit of being able to hide an app from another app (For example, hiding Lucky Patcher from a game).</p><p>And lastly, but most importantly, <strong>a work profile allows us to have two VPNs at the same time</strong>.</p><!--kg-card-begin: html--></div><!--kg-card-end: html--><p>Note that name of the open-source fork is "Insular", but in many places of the app the name still shows up as "Island". Do not be confused by this, the app you're using is Insular.</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Switching from Island to Insular</strong><br>1. If you've setup the "Managed Mainland" feature, you must first rescind control of the mainland (Settings &gt; Scoped settings &gt; Mainland &gt; Rescind).<br><br>2. Destroy the work-profile (Settings &gt; Scoped settings &gt; Island &gt; Rescind) <br><br>3. Uninstall the Island app.<br><br>If you've already uninstalled Island and forgot to destroy the work-profile, you'll have to <a href="https://stackoverflow.com/a/63453017/11490425">delete Island's leftover work-profile manually using ADB</a>. Insular will <strong>not</strong> delete it for you.</div></div><p></p><p>Steps to setup <strong>Insular</strong>:</p><p>1) Download the app: <a href="https://f-droid.org/packages/com.oasisfeng.island.fdroid/">https://f-droid.org/packages/com.oasisfeng.island.fdroid/</a></p><p>2) Launch the app and follow the setup instructions on-screen.</p><blockquote>On most middle to high end Android devices released after 2016, Insular can be setup straightforward without hassle. But still on some devices, you may be notified during the setup with the error message “Sorry, your device (or ROM) is incompatible with Insular”, or other failures. In these cases, Insular could probably still work on your device if setup manually.</blockquote><blockquote>If you are prompted to encrypt your device during the setup, it means your device was not pre-encrypted out of box. If you don’t want device decryption (which may significantly degrade overall I/O performance on some low-end devices), it can be avoided with manual setup.</blockquote><p>You will need a PC and a cable to connect your phone to your PC if you follow <a href="https://secure-system.gitlab.io/Insular/setup.html#manual-setup-for-island">the manual setup guide</a>.</p><p>While you're at it, you might also want to setup these cool (but not necessary for this guide) features:</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Freeze frequently woken apps.</strong><br>Insular allows you to <strong>freeze</strong> any app in the work profile. Freezing an app blocks all its background behaviors. You can even create a launch shortcut for quick de-freezing and launching.<br><br>If you enable <a href="https://secure-system.gitlab.io/Insular/#Insularmanaged-mainland">the "Managed mainland" feature</a>, you can also freeze apps that are in the main profile. <a href="https://secure-system.gitlab.io/Insular/setup.html#activate-managed-mainland">Link to setup guide</a>.</div></div><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Give apps fake permissions</strong>. <br><a href="https://appops.rikka.app/">Rikka's AppOps</a> allows you to set some app's permissions to "ignored", which causes apps to believe they've been granted a permission, when in reality, if they try to use said permission they won't get any data. AppOps has work-profile support.</div></div><h2 id="f-droid-client">F-Droid Client</h2><p>If you don't already have one, you should install an <a href="https://www.youtube.com/watch?v=JMSiTFLpUP8">f-droid client</a>. For this guide I'll be using <a href="https://github.com/Droid-ify/client">Droid-ify</a> (<a href="https://github.com/Droid-ify/client/releases/latest">download here</a>).</p><h2 id="rethinkdns">RethinkDNS</h2><p>Steps to setup RethinkDNS:</p><ol><li><a href="https://f-droid.org/packages/com.celzero.bravedns/">Install and open RethinkDNS</a>.</li><li>Setup the firewall (See: the "Apps" and "Firewall" sections in the app).</li><li>Setup the <a href="https://www.privacyguides.org/en/advanced/dns-overview/#what-is-dns">DNS</a> (See: the "DNS" section in the app). It's recommended that you use either DoT or ODoH.</li><li>Setup the DNS blocklists (See: the "DNS" section in the app). To enable the "On-device blocklists" feature, tap on the text that says "Disabled" in the menu that pops up, and then tap on "Download Blocklists". If the download appears to be stuck, in the DNS menu enable the "Use in-app downloader" feature.</li></ol><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/rethinkdns_inapp-downloader-1.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of RethinkDNS, in the DNS settings menu with the option "Use in-app downloader" highlighted.</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/rethinkdns_blocklists-success-1.jpg" class="kg-image" alt loading="lazy" width="324" height="102"><figcaption>Screenshot of a RethinkDNS notification that says that the blocklists download was successful.</figcaption></figure><p></p><h2 id="sing-box">Sing-box</h2><blockquote>Sing-box is a fast, customizable and universal proxy platform that can be used to create network proxy servers, clients and transparent proxies. This app allows users to manage and use local and remote Sing-box profiles and provides platform specific feature implementations such as the TUN transparent proxy implementation through the Android VpnService.</blockquote><p>We need to install Sing-box in the work-profile. The best way of doing this is to install an f-droid client in the work-profile, and then install Sing-box from said f-droid client. This ensures that we're always using an up-to-date version of Sing-box.</p><p>Here's how you can clone an app from your main-profile into your work-profile:</p><ol><li>Open Insular.</li><li>Search for the app you want to clone.</li><li>Tap on the three dots, and then on "Clone".</li></ol><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_clone-app.jpg" class="kg-image" alt loading="lazy" width="158" height="341"><figcaption>Screenshot of Insular with an app selected, highlighting the option "Clone" which is used to clone the selected app into the work-profile.</figcaption></figure><p>If you have Shizuku installed, you will be presented with an additional menu. There, you must select "Island":</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_clone-app_options.jpg" class="kg-image" alt loading="lazy" width="324" height="199"><figcaption>Screenshot of a pop-up menu in Insular. The options are "via Shizuku", "via Play Store" and "Clone app to Island".</figcaption></figure><p>Then, in the main menu of Insular go to the Island tab, select your f-droid client from the list of apps, and then open it:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_opening-fdroid-1.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of insular showing how to open the F-Droid client that's installed in the work-profile.</figcaption></figure><p>Then open the f-droid client, install "Sing-box" and open it. </p><p>In Sing-box we'll need to create a new "profile":</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_profiles-menu.jpg" class="kg-image" alt loading="lazy" width="324" height="702"></figure><p>In this menu, select "Create Manually":</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_profiles-menu_profile-creation-options.jpg" class="kg-image" alt loading="lazy" width="323" height="186"><figcaption>Screenshot of Sing-box, with the "Create Manually" option highlighted.</figcaption></figure><p></p><p>Give it the name "SOCKS5 Proxy for RethinkDNS". Leave "type" as "Local" and "Source" as "Create New". </p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_new-profile.jpg" class="kg-image" alt loading="lazy" width="324" height="702"></figure><p>Tap on the profile you've just created, and then on "Edit Content". In there, you must add this code:</p><!--kg-card-begin: markdown--><pre><code class="language-json">{
+    &quot;outbounds&quot;:
+    [
+        {
+            &quot;type&quot;: &quot;direct&quot;,
+            &quot;tag&quot;: &quot;direct-out&quot;
+        }
+    ],
+    &quot;inbounds&quot;:
+    [
+        {
+            &quot;type&quot;: &quot;socks&quot;,
+            &quot;tag&quot;: &quot;socks-in&quot;,
+            &quot;listen&quot;: &quot;127.0.0.1&quot;,
+            &quot;listen_port&quot;: 5353,
+            &quot;users&quot;:
+            [
+                {
+                    &quot;username&quot;: &quot;admin&quot;,
+                    &quot;password&quot;: &quot;SECURE_PASSWORD_HERE&quot;
+                }
+            ]
+        }
+    ]
+}
 </code></pre>
-<!--kg-card-end: markdown--><p>After chocolatey has finished installing, close powershell and open it again as administrator. Run:</p><!--kg-card-begin: markdown--><pre><code class="language-powershell">choco install git
-choco install python3
-</code></pre>
-<!--kg-card-end: markdown--><h2 id="installing-etesync">Installing etesync</h2><p>We will now setup the etesync server. To do this, open the Command Prompt (cmd) and run these commands:</p><!--kg-card-begin: markdown--><pre><code class="language-batch">cd %appdata%\..\Local
-mkdir Etesync &amp;&amp; cd Etesync
-git clone https://github.com/ItsIgnacioPortal/etesync-server.git etebase
-setx etesyncpath %appdata%\..\Local\Etesync\
-mkdir etebase_storage &amp;&amp; cd etebase_storage &amp;&amp; mkdir static &amp;&amp; mkdir media
-</code></pre>
-<!--kg-card-end: markdown--><p>Note that you're using my fork of the etesync-server repo. If it ever becomes outdated and you wish to get the latest version of the server, just take note of <a href="https://github.com/ItsIgnacioPortal/etesync-server/commits/master/requirements-win.txt">the changes I did in requierements-win.txt</a>, then clone <a href="https://github.com/etesync/server">the main repo</a>, and apply the changes to the requierements.txt</p><p>Now in an administrator command prompt:</p><pre><code class="language-powershell">cd %etesyncpath%\etebase
-pip install -r requirements-win.txt</code></pre><p>Now open your favorite text editor and paste this:</p><pre><code class="language-ini">[global]
-secret_file = secret.txt
-debug = false
-;Set the paths where data will be stored at
-static_root = C:\Users\User\AppData\Local\Etesync\etebase_storage\static
-media_root = C:\Users\User\AppData\Local\Etesync\etebase_storage\media
-
-;Advanced options, only uncomment if you know what you're doing:
-;static_url = /static/
-;media_url = /user-media/
-;language_code = en-us
-;time_zone = UTC
-;redis_uri = redis://localhost:6379
-
-[allowed_hosts]
-allowed_host1 = your.local.domain.here.com
-
-[database]
-engine = django.db.backends.sqlite3
-name = db.sqlite3
-
-[database-options]
-; Add engine-specific options here, such as postgresql parameter key words
-
-;[ldap]
-;server = &lt;The URL to your LDAP server&gt;
-;search_base = &lt;Your search base&gt;
-;filter = &lt;Your LDAP filter query. '%%s' will be substituted for the username&gt;
-; In case a cache TTL of 1 hour is too short for you, set `cache_ttl` to the preferred
-; amount of hours a cache entry should be viewed as valid:
-;cache_ttl = 5
-;bind_dn = &lt;Your LDAP "user" to bind as. Must be a bind user&gt;
-; Either specify the password directly, or provide a password file
-;bind_pw = &lt;The password to authenticate as your bind user&gt;
-;bind_pw_file = /path/to/the/file.txt</code></pre><p>Save it in <strong>C:\Users\User\AppData\Local\Etesync\etebase</strong> (replace your username there) as <strong>etebase-server.ini</strong></p><p>Note that in that file you have to modify the value of "static_root" and "media_root" so it has your correct windows username. Also, here is where we select what domain we'll be using. No, you don't need to register any domains, we'll do all of this locally. But we must pick a domain name for HTTPS to work. So in that file replace "your.local.domain.here.com" with whichever domain name you want.</p><p>Now in the command prompt run:</p><!--kg-card-begin: markdown--><pre><code class="language-batch">python %etesyncpath%\etebase\manage.py migrate
-</code></pre>
-<!--kg-card-end: markdown--><p>We need to tell windows what our domain name is. Open a text editor as administrator and open "C:\Windows\System32\drivers\etc\hosts". Add these lines at the bottom of the file:</p><!--kg-card-begin: markdown--><pre><code>#etesync server
-YOUR-PC-WIFI-IP-ADDRESS your.local.domain.here.com
-</code></pre>
-<!--kg-card-end: markdown--><p>Finally, run:</p><!--kg-card-begin: markdown--><pre><code class="language-batch">cd %etesyncpath%\etebase
-uvicorn etebase_server.asgi:application --host your.local.domain.here.com --port 8001
-</code></pre>
-<!--kg-card-end: markdown--><p>And your server will be live! Though the setup isn't done yet. Press CTRL+C and run these commands to setup some files and create an administrator user (Note: when you type the password, it won't be visible. Be careful with how you type!)</p><!--kg-card-begin: markdown--><pre><code class="language-batch">python %etesyncpath%\etebase\manage.py collectstatic
-python %etesyncpath%\etebase\manage.py createsuperuser
-</code></pre>
-<!--kg-card-end: markdown--><p>Now the setup for the server is done. We now have to setup the web interface. Download this file: <a href="https://pim.etesync.com/etesync-web.tgz" rel="nofollow">https://pim.etesync.com/etesync-web.tgz</a> and extract it in <strong>C:\Users\User\AppData\Local\Etesync\ </strong>so that index.html is at <strong>C:\Users\User\AppData\Local\Etesync\etesync-web\index.html</strong> using 7zip. You'll have to install 7zip if you don't already have it installed:</p><!--kg-card-begin: markdown--><pre><code class="language-powershell">choco install 7zip
-</code></pre>
-<!--kg-card-end: markdown--><p>To have HTTPS you must follow <a href="https://devopscube.com/create-self-signed-certificates-openssl/">this tutorial</a>. It's fairly complicated, but it's needed to have a secure connection with our server. After you've generated your rootCA.crt you have to install it in your windows PC, and in your phone.</p><ul><li>Double click your rootCA.crt</li><li>Install certificate...</li><li>Store location -&gt; Local Machine</li><li>Next</li><li>Browse -&gt; "Trusted Root Certification Authorities"</li><li>Then finish the setup</li></ul><p>For android, the setting to install a custom certificate was in Settings -&gt; Security &amp; Location -&gt; (Advanced) -&gt; Encryption &amp; credentials -&gt; Install from SD card (You don't actually need an SD card to use this option).</p><h2 id="start-the-servers">Start the servers:</h2><!--kg-card-begin: markdown--><pre><code class="language-batch">cd %etesyncpath%\etebase
-python -m uvicorn etebase_server.asgi:application --port 8001 --host your.local.domain.here.com --ssl-keyfile=&quot;C:\Users\User\AppData\Local\Etesync\cert\server.key&quot; --ssl-certfile=&quot;C:\Users\User\AppData\Local\Etesync\cert\server.crt&quot;
-</code></pre>
-<!--kg-card-end: markdown--><p>In another terminal:</p><!--kg-card-begin: markdown--><pre><code class="language-batch">cd %etesyncpath%\etesync-web\
-python -m http.server 8002 --bind your.local.domain.here.com
-</code></pre>
-<!--kg-card-end: markdown--><h2 id="setup-groups-and-your-user">Setup groups and your user</h2><p>Now to setup the etesync users go to <strong>https://your.local.domain.here.com:8001/admin</strong> in your browser. There you need to enter the admin credentials you setup earlier.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-login.png" class="kg-image" alt loading="lazy" width="394" height="289"></figure><p>Now you will have to create a group. Go to Groups -&gt; New</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-group.png" class="kg-image" alt loading="lazy" width="629" height="232" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-new-group.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-new-group.png 629w"></figure><p>And now name your group <strong>Etesync users</strong>. Below you have to double click ALL of the options that start with "django_etebase" until they're all in the right side. When you're done click save.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-setup-groups.png" class="kg-image" alt loading="lazy" width="977" height="606" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-setup-groups.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-setup-groups.png 977w" sizes="(min-width: 720px) 720px"></figure><p>Once that's done, click on Users-&gt;New on the left side-bar</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-user.png" class="kg-image" alt loading="lazy" width="281" height="274"></figure><p>Pick a username, then continue. Before continuing to fill the form, set the user's password by clicking on the tiny link on the left:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-password.png" class="kg-image" alt loading="lazy" width="897" height="73" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-new-user_set-password.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-password.png 897w" sizes="(min-width: 720px) 720px"></figure><p>Set your password and hit continue. Fill in your user information, and then add yourself to the "Etesync users" group. Just double click on "Etesync users" in the <em>Available groups</em> menu, then click SAVE.</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-groups.png" class="kg-image" alt loading="lazy" width="966" height="418" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/django-new-user_set-groups.png 600w, https://itsignacioportal.github.io/content/images/2023/02/django-new-user_set-groups.png 966w" sizes="(min-width: 720px) 720px"></figure><p>Next we'll create a firewall rule to allow your phone to be able to talk to your etesync server. Open a command prompt as administrator and run:</p><!--kg-card-begin: markdown--><pre><code class="language-batch">netsh advfirewall firewall add rule name= &quot;Etesync TCP&quot; dir=in action=allow protocol=TCP localport=8001
-netsh advfirewall firewall add rule name= &quot;Etesync UDP&quot; dir=in action=allow protocol=UDP localport=8001
-</code></pre>
-<!--kg-card-end: markdown--><p>And that's all done on the PC side! Now for the android setup:</p><h2 id="setup-tasksorg">Setup tasks.org</h2><p>To setup your domain in android, there's several ways. The options available are</p><ul><li><a href="https://pi-hole.net/">pihole</a></li><li><a href="https://nextdns.io/">NextDNS</a></li><li><a href="https://www.zenz-solutions.de/personaldnsfilter-wp/">personalDNSfilter</a></li></ul><p>Since personalDNSfilter doesn't need any external services, and it's open source, that's what I'll use here. Just go through the app setup, and when you're done go to <em>Advanced settings</em> -&gt; <em>Configure additional hosts </em>and add your domain name according to the format explained there:</p><!--kg-card-begin: markdown--><pre><code>&gt;your.local.domain.here.com PC-IP-ADDRESS
-</code></pre>
-<!--kg-card-end: markdown--><p>If you're a NetGuard user, you might have to enable <em>Three dots</em> -&gt; <em>Settings</em> -&gt; <em>Network Options</em> -&gt; <em>Subnet routing. </em>If you would like to use NetGuard and personalDNSfilter at the same time, check my other blogpost: <a href="https://itsignacioportal.github.io/netguard-pdnsf-any-vpn-combo/">How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.</a></p><p>Now go to the <em>Tasks.org app</em> -&gt; <em>Settings</em> -&gt; <em>Add account</em> -&gt; <em>EteSync</em> and then write the username and password that you setup earlier in django. Enable "Show advanced settings" and set the URL to <strong>https://your.local.domain.here.com:8001</strong></p><p>After that hit the save button and you're done! Etesync is up and running. You can access the web interface in your PC on <strong>http://your.local.domain.here.com:8002</strong></p><p>Note that in that page you will also have to enable "Advanced settings" and set the URL to <strong>https://your.local.domain.here.com:8001</strong></p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/etesync-web.png" class="kg-image" alt loading="lazy" width="1343" height="810" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/etesync-web.png 600w, https://itsignacioportal.github.io/content/images/size/w1000/2023/02/etesync-web.png 1000w, https://itsignacioportal.github.io/content/images/2023/02/etesync-web.png 1343w" sizes="(min-width: 720px) 720px"></figure><p>If you're a firefox user you might get stuck in "Deriving encryption". If that's the case, <a href="https://github.com/etesync/etesync-web/issues/237">you have to disable enhanced tracking protection and whitelist your domain in uBlockOrigin</a>. You might also have to clear the cookies and local storage if it gets stuck during sign-in. The easiest way to do that is by using Cookie Auto Delete:</p><ul><li><a href="https://addons.mozilla.org/firefox/addon/cookie-autodelete/">CAD for Firefox</a></li><li><a href="https://chrome.google.com/webstore/detail/cookie-autodelete/fhcgjolkccmbidfldomjliifgaodjagh">CAD for Google Chrome</a></li><li><a href="https://microsoftedge.microsoft.com/addons/detail/djkjpnciiommncecmdefpdllknjdmmmo">CAD for Edge Chromium version</a></li></ul><p>Here's how the tasks menu looks in etesync as of writing this:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/etesync-web-tasks.png" class="kg-image" alt loading="lazy" width="1343" height="723" srcset="https://itsignacioportal.github.io/content/images/size/w600/2023/02/etesync-web-tasks.png 600w, https://itsignacioportal.github.io/content/images/size/w1000/2023/02/etesync-web-tasks.png 1000w, https://itsignacioportal.github.io/content/images/2023/02/etesync-web-tasks.png 1343w" sizes="(min-width: 720px) 720px"></figure><p>Note that Tasks.org won't immediately upload all of your lists to your etesync instance. Instead, <strong>a new section will appear in the sidebar with your etesync username</strong>. To get your tasks to etesync you will have to select them, and then move them to their corresponding collection in etesync:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2023/02/tasks-org-collage.png" class="kg-image" alt loading="lazy" width="511" height="555"></figure><p>You can use the script below on your PC to quickly start the etesync server and it's web interface. Just save it in a file and double click it to launch it. Press CTRL+C on both windows to stop the server.</p><pre><code class="language-batch">@echo off
-start cmd /k cd %etesyncpath%\etebase ^&amp;^&amp; python -m uvicorn etebase_server.asgi:application --port 8001 --host your.local.domain.here --ssl-keyfile="C:\Users\User\AppData\Local\Etesync\cert\server.key" --ssl-certfile="C:\Users\User\AppData\Local\Etesync\cert\server.crt" ^&amp; pause ^&amp;^&amp; exit
-
-cd %etesyncpath%\etesync-web
-python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; exit</code></pre>
+<!--kg-card-end: markdown--><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">‼️</div><div class="kg-callout-text"><strong>WARNING: Insecure default password</strong><br>Make sure you change the password in that text with <a href="https://bitwarden.com/password-generator/">one that's actually secure</a>. Replace the text SECURE_PASSWORD_HERE.</div></div><p></p><h2 id="rethinkdns-socks5-proxy-setup">RethinkDNS SOCKS5 Proxy setup</h2><p>Go to RethinkDNS and then to the "Proxy" section. There you must enable the "Setup SOCKS5 Proxy" option, and a menu will pop-up. We'll set this up using the settings of the proxy profile we created in Sing-box.</p><p>For app, leave it as "None". Hostname is 127.0.0.1. Change the "Port Number" to 5353. Fill in your credentials (Use username "admin", and for the password use the same password you put in the Sing-box profile config).</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/rethinkdns_socks5-setup.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of RethinkDNS, setting up the SOCKS5 proxy. App = None. Port number = 5353. Username = admin. Password = your password here. "Block UDP Except DNS and NTP" checkbox = not checked.</figcaption></figure><p></p><h2 id="setup-the-real-vpn">Setup the real VPN</h2><p>Once that's all been setup, all that is left is to install a VPN app in the work profile. You can use the same f-droid client you used for Sing-box to look for a good VPN. Both ProtonVPN and Mullvad VPN are available on f-droid.</p><h2 id="start-everything">Start everything</h2><ol><li>Start the VPN</li><li>Start Sing-box and hit play on the profile you've created ("SOCKS5 Proxy for RethinkDNS").</li><li>Start RethinkDNS.</li></ol><p>After starting the VPN, if you did everything right, you should see some traffic starting to pop up on your VPN app:</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2024/05/protonvpn-1.jpg" class="kg-image" alt loading="lazy" width="294" height="574"></figure><p>You can verify that the VPN is working by going to any of the following sites with the VPN activated:</p><ul><li><a href="https://whatismyipaddress.com">whatismyipaddress.com</a></li><li><a href="https://browserleaks.org/dns">browserleaks.org/dns</a></li><li><a href="https://whoer.net">whoer.net</a></li></ul><p></p><p>If you wish to <strong>disconnect </strong>from the VPN without dropping any packets, do this, in this specific order:</p><!--kg-card-begin: markdown--><ol>
+<li>Disable &quot;Setup SOCKS5 Proxy&quot; in RethinkDNS.</li>
+<li>Stop your VPN app and the SOCKS5 proxy on &quot;Sing-box&quot;.</li>
+<li>&quot;Deactivate&quot; the work profile:
+<ul>
+<li>If you have a notification from Insular, deactivate the work profile using the notification.</li>
+<li>If you don't have the notification (see: <a href="https://gitlab.com/secure-system/Insular/-/issues/69">Insular#69</a>) use the <a href="https://www.youtube.com/watch?v=aiEm9GMp5mI">quick-settings toggle</a>:</li>
+</ul>
+</li>
+</ol>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/quick-settings.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of the Android quick settings menu, with the "Work apps" toggle highlighted.</figcaption></figure><h1 id="faq">F.A.Q.</h1><h2 id="where-do-i-install-apps">Where do I install apps?</h2><p>To be able to use all features of RethinkDNS, you must install any new apps <strong>in the main-profile (like you've always done)</strong>. Apps installed in the work-profile will completely bypass RethinkDNS and their requests won't be filtered, allowing them to load ads and upload analytics data.</p><p>If you really want to install apps in the work profile, you can do the following:</p><p>If the VPN you've installed in the work-profile supports <a href="https://protonvpn.com/support/protonvpn-split-tunneling/">split-tunneling</a>, you can enable the Android setting "Block connections without VPN" for the VPN (not for Rethink) and then add only Sing-box to the allow-list of the VPN app's split-tunneling settings. This prevents system-apps in the work profile from accessing the internet (such as Google Chrome and the Google Playstore). </p><p>This will also allow apps to be installed in the work profile with their own personal-storage-space for SMS, call logs, contacts, and files, without granting them internet access. Do note though, unlike the apps installed in the main-profile, apps installed in the work-profile will never have their requests filtered by RethinkDNS.</p><p>If you want to test a dangerous (malware-ridden) app, do not use the work-profile. Instead, use <a href="https://virustotal.com">VirusTotal</a>, <a href="https://github.com/twoyi/twoyi">Twoyi</a> (<a href="https://github.com/twoyi/twoyi/releases/">download here</a>) and/or <a href="https://f-droid.org/repo/io.va.exposed">VirtualXPosed</a>.</p>
         </section>
 
         <div class="gh-canvas">
@@ -507,13 +468,13 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="/firewall-and-vpn-without-root-on-android/">
+        <a class="post-card-content-link" href="/how-to-setup-etesync-for-tasks-org-in-windows/">
             <header class="post-card-header">
-                <h2 class="post-card-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers.</h2>
+                <h2 class="post-card-title">How to setup Etesync for Tasks.org in Windows</h2>
             </header>
         </a>
         <div class="post-card-excerpt">
-            <p>For this guide we'll be using Insular, RethinkDNS and Sing-box.  This is an updated version of the “How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.” guide. Unlike the previous version of this guide, this setup has: No DNS leaks.No UDP leaks.Less battery usage.</p>
+            <p>In this blog I will explain how to set up etesync for local use (a server that will only be exposed to your trusted LAN). If you wish to setup etesync for it to be exposed to the internet, an advanced guide which uses nginx in WSL and internal port-forwarding</p>
         </div>
     
 
@@ -527,7 +488,7 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
             </ul>
             <div class="post-card-byline-content">
                 <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
-                <span class="post-card-byline-date"><time datetime="2024-05-09">May 9, 2024</time> <span class="bull">&bull;</span> 8 min read</span>
+                <span class="post-card-byline-date"><time datetime="2023-02-09">Feb 9, 2023</time> <span class="bull">&bull;</span> 7 min read</span>
             </div>
         </footer>
 
