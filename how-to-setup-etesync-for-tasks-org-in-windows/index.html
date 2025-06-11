@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-mode">
+<html lang="en">
 <head>
 
     <title>How to setup Etesync for Tasks.org in Windows</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src https://itsignacioportal.github.io; script-src https://itsignacioportal.github.io https://code.jquery.com https://giscus.app 'sha256-TyzkPRnlqkgMih5qumaDTEUqEasNqkU9m53c7XQplOw=' 'sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc=' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='; style-src https://giscus.app https://itsignacioportal.github.io 'sha256-8aGjwNu6b2DvIOmYm56mdAUDL0bKAYmok/uwFfUSl8Q=' 'sha256-zOtw5aJI0hYxYQa8yoorwsNdKom4qLcsoCeGcDH+uGA=' 'sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=' 'sha256-Yp+k198nqFGx1b6dn3RN6hzLayU6iJGufsxgt29cHts='; img-src *; connect-src 'none'; font-src 'none'; object-src 'none'; media-src https://itsignacioportal.github.io https://youtube.com; sandbox allow-scripts allow-forms; child-src https://itsignacioportal.github.io https://giscus.app; form-action 'self'; frame-ancestors *; base-uri https://itsignacioportal.github.io; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests; block-all-mixed-content;" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6891305683136101" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
@@ -16,7 +16,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=abe131c65f" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=c023cc7915" />
 
     <meta name="description" content="In this blog I will explain how to setup a local Etesync server to use it with the Tasks.org android app in a home setup." />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -57,20 +57,12 @@
         "url": "https://itsignacioportal.github.io/",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://itsignacioportal.github.io/favicon.ico",
-            "width": 60,
-            "height": 60
+            "url": "https://itsignacioportal.github.io/favicon.ico"
         }
     },
     "author": {
         "@type": "Person",
         "name": "Ignacio J. Perez Portal",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://itsignacioportal.github.io/content/images/2023/01/Circle.png",
-            "width": 786,
-            "height": 786
-        },
         "url": "https://itsignacioportal.github.io/author/ignacio/",
         "sameAs": []
     },
@@ -366,13 +358,12 @@
                 <section class="article-byline-content">
                     <ul class="author-list">
                         <li class="author-list-item">
-                            <a href="/author/ignacio/" class="author-avatar">
-                                <img class="author-profile-image" src="/content/images/size/w100/2023/01/Circle.png" alt="Ignacio J. Perez Portal" />
-                            </a>
+                            <a href="/author/ignacio/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
                         </li>
                     </ul>
                     <div class="article-byline-meta">
-                        <p class="author-name"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></h4>
+                        <h4 class="author-name"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></h4>
                         <div class="byline-meta-content">
                             <time class="byline-meta-date" datetime="2023-02-09">Feb 9, 2023</time>
                             <span class="byline-reading-time"><span class="bull">&bull;</span> 7 min read</span>
@@ -461,40 +452,20 @@ cd %etesyncpath%\etesync-web
 python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; exit</code></pre>
         </section>
 
-        <div class="gh-canvas">
-        	<div class="center-horizontally">
-        		<br>
-				<hr id="tophr">
-				<h2>Having trouble?</h2>
-				<p>For a one-time USD$10 donation you can <b>get one-on-one troubleshooting support</b> for any of my guides/projects. I'll help you fix <b>any issue</b> you may have encountered regarding usage/deployment of one of my guides. More info in <a href="https://github.com/sponsors/ItsIgnacioPortal?o=esc" class="link">my Github Sponsors profile</a>.</p>
-				<br>
-				<a href="https://github.com/sponsors/ItsIgnacioPortal?o=esc">
-					<iframe class="center-horizontally" id="github-sponsors-iframe" src="/content/media/github-sponsor-card.html" title="Sponsor ItsIgnacioPortal" width="100%"></iframe>
-				</a>
-				<hr>
-        	</div>
-        </div>
-        
-
-        <section class="article-comments gh-canvas">
-            <script src="https://giscus.app/client.js"
-                data-repo="ItsIgnacioPortal/ItsIgnacioPortal.github.io"
-                data-repo-id="R_kgDOHCib7w"
-                data-category="Announcements"
-                data-category-id="DIC_kwDOHCib784COZ-J"
-                data-mapping="pathname"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="bottom"
-                data-theme="dark"
-                data-lang="en"
-                crossorigin="anonymous"
-                async>
-            </script>
-        </section>
 
     </article>
 </main>
+
+
+    <section class="footer-cta ">
+        <div class="inner">
+            <h2>Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
 
 
 
@@ -511,18 +482,16 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
             <header class="post-card-header">
                 <h2 class="post-card-title">Transparent compression on Android</h2>
             </header>
+            <div class="post-card-excerpt">
+                <p>Similarly to CompactGUI, transparent compression seems to be theoretically possible on Android. These are the steps: Modify your android kernel to add full NTFS support via the NTFS-3G project. This has already been done:  	- https://www.xda-developers.com/full-ntfs-readwrite-support-for-android/ 	- https://superuser.com/questions/257267/is-it-a-good-idea-to-use-compressed-ntfs-filesystem-on-an-external-harddiskInsert the SD-Card into</p>
+            </div>
         </a>
-        <div class="post-card-excerpt">
-            <p>Similarly to CompactGUI, transparent compression seems to be theoretically possible on Android. These are the steps: Modify your android kernel to add full NTFS support via the NTFS-3G project. This has already been done:  	- https://www.xda-developers.com/full-ntfs-readwrite-support-for-android/ 	- https://superuser.com/questions/257267/is-it-a-good-idea-to-use-compressed-ntfs-filesystem-on-an-external-harddiskInsert the SD-Card into</p>
-        </div>
-    
 
         <footer class="post-card-meta">
             <ul class="author-list">
                 <li class="author-list-item">
-                    <a href="/author/ignacio/" class="static-avatar">
-                        <img class="author-profile-image" src="/content/images/size/w100/2023/01/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
-                    </a>
+                    <a href="/author/ignacio/" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
                 </li>
             </ul>
             <div class="post-card-byline-content">
@@ -544,18 +513,16 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
             <header class="post-card-header">
                 <h2 class="post-card-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers.</h2>
             </header>
+            <div class="post-card-excerpt">
+                <p>The apps necessary to do this are Insular, RethinkDNS and Sing-box.  This is an updated version of the “How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.” guide. Unlike the previous version of this guide, this setup has: No DNS leaks.No UDP leaks.Less battery</p>
+            </div>
         </a>
-        <div class="post-card-excerpt">
-            <p>The apps necessary to do this are Insular, RethinkDNS and Sing-box.  This is an updated version of the “How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.” guide. Unlike the previous version of this guide, this setup has: No DNS leaks.No UDP leaks.Less battery</p>
-        </div>
-    
 
         <footer class="post-card-meta">
             <ul class="author-list">
                 <li class="author-list-item">
-                    <a href="/author/ignacio/" class="static-avatar">
-                        <img class="author-profile-image" src="/content/images/size/w100/2023/01/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
-                    </a>
+                    <a href="/author/ignacio/" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
                 </li>
             </ul>
             <div class="post-card-byline-content">
@@ -577,18 +544,16 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
             <header class="post-card-header">
                 <h2 class="post-card-title">How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.</h2>
             </header>
+            <div class="post-card-excerpt">
+                <p>Updated, and improved guide: https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/ Together, with the people over at the personalDNSfilter Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of work profiles. All of this started because I was trying to control Work-profile apps</p>
+            </div>
         </a>
-        <div class="post-card-excerpt">
-            <p>Updated, and improved guide: https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/ Together, with the people over at the personalDNSfilter Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of work profiles. All of this started because I was trying to control Work-profile apps</p>
-        </div>
-    
 
         <footer class="post-card-meta">
             <ul class="author-list">
                 <li class="author-list-item">
-                    <a href="/author/ignacio/" class="static-avatar">
-                        <img class="author-profile-image" src="/content/images/size/w100/2023/01/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
-                    </a>
+                    <a href="/author/ignacio/" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
                 </li>
             </ul>
             <div class="post-card-byline-content">
@@ -609,7 +574,7 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
 
     <footer class="site-footer outer">
         <div class="inner">
-            <section class="copyright"><a href="https://itsignacioportal.github.io">ItsIgnacioPortal&#x27;s Blog</a> &copy; 2024</section>
+            <section class="copyright"><a href="https://itsignacioportal.github.io">ItsIgnacioPortal&#x27;s Blog</a> &copy; 2025</section>
             <nav class="site-footer-nav">
                 <ul class="nav">
     <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
@@ -628,7 +593,7 @@ python -m http.server 8002 --bind your.local.domain.here &amp; pause &amp;&amp; 
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=abe131c65f"></script>
+<script src="/assets/built/casper.js?v=c023cc7915"></script>
 <script integrity="sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc=">
 $(document).ready(function () {
     // Mobile Menu Trigger
@@ -663,22 +628,7 @@ for (i = 0; i < coll.length; i++) {
 			content.style.maxHeight = content.scrollHeight + "px";
 		} 
 	});
-} 
-node = document.createElement("a") 
-node.href = "https://hits.seeyoufarm.com" 
-
-encoded = encodeURIComponent(window.location.href)
-nodeimg = document.createElement("img") 
-nodeimg.id = "hitcounter" 
-nodeimg.src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=" + encoded + "&count_bg=%23454545&title_bg=%2317b595&icon_color=%23E7E7E7&title=Post%20visitor%20count&edge_flat=true" 
-nodeimg.alt = "Post visitor counter"
-node.appendChild(nodeimg)
-    
-try {
-	element = document.getElementsByClassName("byline-meta-content")
-	element[0].appendChild(node) 	
-} catch (error){}
-    
+}   
 </script>
 <script src="/assets/js/lib/prism.js"></script>
 
