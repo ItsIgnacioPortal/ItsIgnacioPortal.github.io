@@ -423,6 +423,24 @@
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/quick-settings.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of the Android quick settings menu, with the "Work apps" toggle highlighted.</figcaption></figure><h1 id="faq">F.A.Q.</h1><h2 id="where-do-i-install-apps">Where do I install apps?</h2><p>To be able to use all features of RethinkDNS, you must install any new apps <strong>in the main-profile (like you've always done)</strong>. Apps installed in the work-profile will completely bypass RethinkDNS and their requests won't be filtered, allowing them to load ads and upload analytics data.</p><p>If you really want to install apps in the work profile, you can do the following:</p><p>If the VPN you've installed in the work-profile supports <a href="https://protonvpn.com/support/protonvpn-split-tunneling/">split-tunneling</a>, you can enable the Android setting "Block connections without VPN" for the VPN (not for Rethink) and then add only Sing-box to the allow-list of the VPN app's split-tunneling settings. This prevents system-apps in the work profile from accessing the internet (such as Google Chrome and the Google Playstore). </p><p>This will also allow apps to be installed in the work profile with their own personal-storage-space for SMS, call logs, contacts, and files, without granting them internet access. Do note though, unlike the apps installed in the main-profile, apps installed in the work-profile will never have their requests filtered by RethinkDNS.</p><p>If you want to test a dangerous (malware-ridden) app, do not use the work-profile. Instead, use <a href="https://virustotal.com">VirusTotal</a>, <a href="https://github.com/twoyi/twoyi">Twoyi</a> (<a href="https://github.com/twoyi/twoyi/releases/">download here</a>), <a href="https://f-droid.org/repo/io.va.exposed">VirtualXPosed</a>, or an Android-Studio Android-Emulator.</p>
         </section>
 
+        <div class="gh-canvas">
+            <div class="center-horizontally">
+                <br>
+                <hr id="tophr">
+                <h2>Having trouble?</h2>
+                <p>For a one-time USD$10 donation you can <b>get one-on-one troubleshooting support</b> for any of my guides/projects. I'll help you fix <b>any issue</b> you may have encountered regarding usage/deployment of one of my guides. More info in <a href="https://web.archive.org/web/20250314003845/https://github.com/sponsors/ItsIgnacioPortal?o=esc" class="link">my Github Sponsors profile</a>.</p>
+                <br>
+                <a href="https://github.com/sponsors/ItsIgnacioPortal?o=esc">
+                    <iframe class="center-horizontally" id="github-sponsors-iframe" src="/content/media/github-sponsor-card.html" title="Sponsor ItsIgnacioPortal" width="100%" data-ruffle-polyfilled=""></iframe>
+                </a>
+                <hr>
+            </div>
+        </div>
+        
+        <section class="article-comments gh-canvas">
+            <div class="giscus"></div>
+        </section>
+        
 
     </article>
 </main>
@@ -605,6 +623,22 @@ for (i = 0; i < coll.length; i++) {
 }
 </script>
 <script src="/assets/js/lib/prism.js"></script>
+<script src="https://giscus.app/client.js"
+        data-repo="itsignacioportal/itsignacioportal.github.io"
+        data-repo-id="R_kgDOHCib7w"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOHCib784COZ-J"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
 
 </body>
 </html>
