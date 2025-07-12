@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+
+    <title>How to: Firewall + VPN app at the same time. No root 2025</title>
+    <meta http-equiv="Content-Security-Policy" content="object-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:; script-src-elem * 'unsafe-inline' 'unsafe-eval'; base-uri 'none'"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6891305683136101" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style integrity="sha256-8aGjwNu6b2DvIOmYm56mdAUDL0bKAYmok/uwFfUSl8Q=">
+        :root {
+            --button-bg-color: #ffffff;
+            --button-text-color: var(--color-darkgrey);
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=d30f4e6105" />
+
+    <meta name="description" content="No root or external servers neeeded. Requirements: Android 5.0+, 
+446.03 MB of available storage, a computer and a cable to connect your phone." />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="ItsIgnacioPortal&#x27;s Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to: Firewall + VPN app at the same time. No root 2025" />
+    <meta property="og:description" content="No root or external servers neeeded. Requirements: Android 5.0+, 
+446.03 MB of available storage, a computer and a cable to connect your phone." />
+    <meta property="og:url" content="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/" />
+    <meta property="article:published_time" content="2025-06-24T22:21:48.000Z" />
+    <meta property="article:modified_time" content="2025-07-12T07:08:20.000Z" />
+    <meta property="article:tag" content="Privacy" />
+    <meta property="article:tag" content="No Root" />
+    <meta property="article:tag" content="VPN" />
+    <meta property="article:tag" content="How to" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Privacy guide: Firewall + any VPN on Android without root (2025)" />
+    <meta name="twitter:description" content="No root or external (self-hosted) servers needed." />
+    <meta name="twitter:url" content="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/" />
+    <meta name="twitter:image" content="https://itsignacioportal.github.io/content/images/2025/07/ABSOLUTE-PRIVACY.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ignacio J. Perez Portal" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Privacy, No Root, VPN, How to" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "ItsIgnacioPortal&#x27;s Blog",
+        "url": "https://itsignacioportal.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://itsignacioportal.github.io/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ignacio J. Perez Portal",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://itsignacioportal.github.io/content/images/2025/06/Circle.png",
+            "width": 786,
+            "height": 786
+        },
+        "url": "https://itsignacioportal.github.io/author/ignacio/",
+        "sameAs": []
+    },
+    "headline": "How to: Firewall + VPN app at the same time. No root 2025",
+    "url": "https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/",
+    "datePublished": "2025-06-24T22:21:48.000Z",
+    "dateModified": "2025-07-12T07:08:20.000Z",
+    "keywords": "Privacy, No Root, VPN, How to",
+    "description": "✅ You&#x27;re reading the latest version of this guide.\n\nIt&#x27;s often considered impossible to use both a firewall and a VPN at the same\ntime on android without root, mainly due to the fact that you can normally only\nconnect to a single VPN at a time, and firewall apps require this “VPN slot” in\norder to capture all device traffic.\n\nBut by taking advantage of the Android Work Profile, it&#x27;s actually possible to\nconnect to two VPNs at the same time, allowing use of a firewall app and an\nactual VPN app at",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://itsignacioportal.github.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.48" />
+    <link rel="alternate" type="application/rss+xml" title="ItsIgnacioPortal&#x27;s Blog" href="https://itsignacioportal.github.io/rss/" />
+    
+    <style integrity="sha256-zOtw5aJI0hYxYQa8yoorwsNdKom4qLcsoCeGcDH+uGA=">
+    /* Hide the Membership aka Subscribe actions etc. */
+    #ghost-portal-root,
+    a[href^="https://ghost.org"],
+    a[href^="#/portal/signup"],
+    .footer-cta { display: none; }
+
+    li.nav-sign-up a { display:none; }
+
+    /* Fix page title */
+    div .gh-head-brand {
+        max-width: 210px;
+    }
+    
+    /*Use a readable font*/
+    p, ul, ol {
+    	font-family: sans-serif !important;
+    }
+    
+    /**Pretty hit counter**/
+    img#hitcounter {
+    	min-width: 100%;
+    }
+    
+     /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+        border-radius: 8px;
+    	background-color: #2e2eb8;;
+    	color: hsla(0,0%,100%,.9);
+    	cursor: pointer;
+    	padding: 14px 18px 18px 18px;
+    	width: 100%;
+    	border: none;
+    	text-align: left;
+    	outline: none;
+    	font-size: 20px;
+		font-weight: bold;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+    	background-color: #1f1f7a;
+		color: hsla(0,0%,100%,.9);
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #23262a;
+    }
+    .gh-content.content h1, .gh-content.content h2, .gh-content.content h3, .gh-content.content h4 {
+      margin-top: 18px;
+    }
+    
+    .gh-content.content p:last-of-type{
+      margin-bottom: 18px;
+    }
+    
+    /**Fancy icons for the collapse button**/
+    .collapsible:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+    
+    /**Prettier selection text**/
+    ::selection, ::selection {
+		background-color: #003d99;
+	}
+    
+    /*!
+    * Gist DarkCode ver 0.2.1 
+    * Update 03/12/2021 www.adiman.web.id
+    * https://gist.github.com/adimancv/eb2f4b46d3c95e6b8fe4dd52375236b2
+    */
+	.gist{font-size: 18px}.gist-meta, .gist-file, .octotree_toggle, ul.comparison-list > li.title,button.button, a.button, span.button, button.minibutton, a.minibutton,span.minibutton, .clone-url-button > .clone-url-link{background: linear-gradient(#202020, #181818) !important;border-color: #383838 !important;border-radius: 0 0 3px 3px !important;text-shadow: none !important;color: #b5b5b5 !important}.markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,.markdown-body .highlight pre, body.blog pre, #facebox pre, .blob-expanded,.terminal, .copyable-terminal, #notebook .input_area, .blob-code-context,.markdown-format code, body.blog pre > code, .api pre, .api code,.CodeMirror,.highlight{background-color: #1D1F21!important;color: #C5C8C6!important}.gist .blob-code{padding: 1px 10px !important;text-align: left;background: #000;border: 0}::selection{background: #24890d;color: #fff;text-shadow: none}::-moz-selection{background: #24890d;color: #fff;text-shadow: none}.blob-num{padding: 10px 8px 9px;text-align: right;color: #6B6B6B!important;border: 0}.blob-code,.blob-code-inner{color: #C5C8C6!important}.pl-c,.pl-c span{color: #969896!important;font-style: italic!important}.pl-c1{color: #DE935F!important}.pl-cce{color: #DE935F!important}.pl-cn{color: #DE935F!important}.pl-coc{color: #DE935F!important}.pl-cos{color: #B5BD68!important}.pl-e{color: #F0C674!important}.pl-ef{color: #F0C674!important}.pl-en{color: #F0C674!important}.pl-enc{color: #DE935F!important}.pl-enf{color: #F0C674!important}.pl-enm{color: #F0C674!important}.pl-ens{color: #DE935F!important}.pl-ent{color: #B294BB!important}.pl-entc{color: #F0C674!important}.pl-enti{color: #F0C674!important;font-weight: 700!important}.pl-entm{color: #C66!important}.pl-eoa{color: #B294BB!important}.pl-eoac{color: #C66!important}.pl-eoac .pl-pde{color: #C66!important}.pl-eoai{color: #B294BB!important}.pl-eoai .pl-pde{color: #B294BB!important}.pl-eoi{color: #F0C674!important}.pl-k{color: #B294BB!important}.pl-ko{color: #B294BB!important}.pl-kolp{color: #B294BB!important}.pl-kos{color: #DE935F!important}.pl-kou{color: #DE935F!important}.pl-mai .pl-sf{color: #C66!important}.pl-mb{color: #B5BD68!important;font-weight: 700!important}.pl-mc{color: #B294BB!important}.pl-mh .pl-pdh{color: #DE935F!important}.pl-mi{color: #B294BB!important;font-style: italic!important}.pl-ml{color: #B5BD68!important}.pl-mm{color: #C66!important}.pl-mp{color: #81A2BE!important}.pl-mp1 .pl-sf{color: #81A2BE!important}.pl-mq{color: #DE935F!important}.pl-mr{color: #B294BB!important}.pl-ms{color: #B294BB!important}.pl-pdb{color: #B5BD68!important;font-weight: 700!important}.pl-pdc{color: #969896!important;font-style: italic!important}.pl-pdc1{color: #DE935F!important}.pl-pde{color: #DE935F!important}.pl-pdi{color: #B294BB!important;font-style: italic!important}.pl-pds{color: #B5BD68!important}.pl-pdv{color: #C66!important}.pl-pse{color: #DE935F!important}.pl-pse .pl-s2{color: #DE935F!important}.pl-s{color: #B294BB!important}.pl-s1{color: #B5BD68!important}.pl-s2{color: #c5c8c6!important}.pl-mp .pl-s3{color: #B294BB!important}.pl-s3{color: #81a2be!important}.pl-sc{color: #c5c8c6!important}.pl-scp{color: #DE935F!important}.pl-sf{color: #DAD085!important}.pl-smc{color: #F0C674!important}.pl-smi{color: #c5c8c6!important}.pl-smp{color: #c5c8c6!important}.pl-sok{color: #B294BB!important}.pl-sol{color: #B5BD68!important}.pl-som{color: #C66!important}.pl-sr{color: #C66!important}.pl-sra{color: #B294BB!important}.pl-src{color: #B294BB!important}.pl-sre{color: #B294BB!important}.pl-st{color: #B294BB!important}.pl-stj{color: #c5c8c6!important}.pl-stp{color: #DE935F!important}.pl-sv{color: #DE935F!important}.pl-v{color: #DE935F!important}.pl-vi{color: #DE935F!important}.pl-vo{color: #C66!important}.pl-vpf{color: #DE935F!important}.pl-mi1{color: #8F9D6A!important;background: rgba(0,64,0,.5)!important}.pl-mdht{color: #8F9D6A!important;background: rgba(0,64,0,.5)!important}.pl-md{color: #C66!important;background: rgba(64,0,0,.5)!important}.pl-mdhf{color: #C66!important;background: rgba(64,0,0,.5)!important}.pl-mdr{color: #DE935F!important;font-weight: 400!important}.pl-mdh{color: #C66!important;font-weight: 400!important}.pl-mdi{color: #C66!important;font-weight: 400!important}.pl-ib{background-color: #C66!important}.pl-id{background-color: #C66!important;color: #fff!important}.pl-ii{background-color: #C66!important;color: #fff!important}.pl-iu{background-color: #C66!important}.pl-mo{color: #c5c8c6!important}.pl-mri{color: #DE935F!important}.pl-ms1{background-color: #c5c8c6!important}.pl-va{color: #DE935F!important}.pl-vpu{color: #DE935F!important}.pl-entl{color: #c5c8c6!important}.CodeMirror-gutters{background: #222!important;border-right: 1px solid #484848!important}.CodeMirror-guttermarker{color: #fff!important}.CodeMirror-guttermarker-subtle{color: #aaa!important}.CodeMirror-linenumber{color: #aaa!important}.CodeMirror-cursor{border-left: 1px solid #fff!important}.CodeMirror-activeline-background{background: #27282E!important}.CodeMirror-matchingbracket{outline: 1px solid grey!important;color: #fff!important}.cm-keyword{color: #f9ee98!important}.cm-atom{color: #FC0!important}.cm-number{color: #ca7841!important}.cm-def{color: #8DA6CE!important}.cm-variable-2,span.cm-tag{color: #607392!important}.cm-variable-3,span.cm-def{color: #607392!important}.cm-operator{color: #cda869!important}.cm-comment{color: #777!important;font-style: italic!important;font-weight: 400!important}.cm-string{color: #8f9d6a!important}.cm-string-2{color: #bd6b18!important}.cm-meta{background-color: #141414!important;color: #f7f7f7!important}.cm-builtin{color: #cda869!important}.cm-tag{color: #997643!important}.cm-attribute{color: #d6bb6d!important}.cm-header{color: #FF6400!important}.cm-hr{color: #AEAEAE!important}.cm-link{color: #ad9361!important;font-style: italic!important;text-decoration: none!important}.cm-error{border-bottom: 1px solid red!important}#notebook .highlight table{background: #1d1f21!important;color: #c5c8c6!important}.highlight .hll{background-color: #373b41!important}.highlight .c{color: #969896!important}.highlight .err{color: #c66!important}.highlight .k{color: #b294bb!important}.highlight .l{color: #de935f!important}.highlight .h,.highlight .n{color: #c5c8c6!important}.highlight .o{color: #8abeb7!important}.highlight .p{color: #c5c8c6!important}.highlight .cm{color: #969896!important}.highlight .cp{color: #969896!important}.highlight .c1{color: #969896!important}.highlight .cs{color: #969896!important}.highlight .gd{color: #c66!important}.highlight .ge{font-style: italic!important}.highlight .gh{color: #c5c8c6!important;font-weight: 700!important}.highlight .gi{color: #b5bd68!important}.highlight .gp{color: #969896!important;font-weight: 700!important}.highlight .gs{font-weight: 700!important}.highlight .gu{color: #8abeb7!important;font-weight: 700!important}.highlight .kc{color: #b294bb!important}.highlight .kd{color: #b294bb!important}.highlight .kn{color: #8abeb7!important}.highlight .kp{color: #b294bb!important}.highlight .kr{color: #b294bb!important}.highlight .kt{color: #f0c674!important}.highlight .ld{color: #b5bd68!important}.highlight .m{color: #de935f!important}.highlight .s{color: #b5bd68!important}.highlight .na{color: #81a2be!important}.highlight .nb{color: #c5c8c6!important}.highlight .nc{color: #f0c674!important}.highlight .no{color: #c66!important}.highlight .nd{color: #8abeb7!important}.highlight .ni{color: #c5c8c6!important}.highlight .ne{color: #c66!important}.highlight .nf{color: #81a2be!important}.highlight .nl{color: #c5c8c6!important}.highlight .nn{color: #f0c674!important}.highlight .nx{color: #81a2be!important}.highlight .py{color: #c5c8c6!important}.highlight .nt{color: #8abeb7!important}.highlight .nv{color: #c66!important}.highlight .ow{color: #8abeb7!important}.highlight .w{color: #c5c8c6!important}.highlight .mf{color: #de935f!important}.highlight .mh{color: #de935f!important}.highlight .mi{color: #de935f!important}.highlight .mo{color: #de935f!important}.highlight .sb{color: #b5bd68!important}.highlight .sc{color: #c5c8c6!important}.highlight .sd{color: #969896!important}.highlight .s2{color: #b5bd68!important}.highlight .se{color: #de935f!important}.highlight .sh{color: #b5bd68!important}.highlight .si{color: #de935f!important}.highlight .sx{color: #b5bd68!important}.highlight .sr{color: #b5bd68!important}.highlight .s1{color: #b5bd68!important}.highlight .ss{color: #b5bd68!important}.highlight .bp{color: #c5c8c6!important}.highlight .vc{color: #c66!important}.highlight .vg{color: #c66!important}.highlight .vi{color: #c66!important}.highlight .il{color: #de935f!important}
+    .gist .markdown-body .csv-data th, .gist .markdown-body .csv-data td, .gist .markdown-body .csv-data .blob-num {background: #000; background-color: #000;}
+    .gist .blob-interaction-bar .octicon-search > path {fill: #fff}
+    .gist .blob-interaction-bar > input {background: #000}
+    .gist .blob-interaction-bar {background: #000}
+    .gist-meta{display: none;}
+    
+    /*Visible description text*/
+    .post-card-excerpt p {
+        mask-image: linear-gradient(to bottom, black, transparent 95%);
+        -webkit-mask-image: linear-gradient(to bottom, black, transparent 95%);
+        color: #bfbfbf;
+        padding-top: 3px;
+    }
+
+    /*Visible tags*/
+    .post-card-primary-tag, .article-tag a {
+        color: #0ff !important;
+    }
+
+    /*Readable tables*/
+	tr th {
+    	min-width: 95px;
+    }
+    
+    /*Prettier tables*/
+    td {
+        padding: 2px 10px;
+    }
+
+    table, th, td {
+    	border: 1px solid #639 !important;
+    }
+
+    /*Prettier homepage*/
+    .site-header-content {
+        max-height: 200px;
+    }
+
+    a#hitcouter-wrap {
+        margin-top: 12px;
+    }
+    
+    /*Disable the white border around profile pictures*/
+    .author-avatar {
+        border: none;
+    }
+    
+    /*Prettier TIPs*/
+    .kg-card.kg-callout-card.kg-callout-card-grey .kg-callout-text {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        line-height: 32px
+    }
+
+    .kg-callout-text {
+        color: #fff;
+    }
+    
+    .kg-callout-emoji {
+		color: initial;
+	}
+    
+    .kg-callout-card-grey {
+        background: rgba(124,139,154,.13);
+    }
+
+    .kg-callout-card {
+        display: flex;
+        padding: 20px 28px;
+        background: #212326;
+        border-radius: 3px;
+    }
+
+    .kg-callout-emoji {
+        height: 32px;
+        margin-right: 8px;
+        margin-left: -8px;
+        padding: 0 8px;
+        font-size: 2rem;
+        line-height: 1.6;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    
+    /*Accesibility colors for links*/
+    html.dark-mode .gh-content a:not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button) {
+        color: #6BA5FF;
+    }
+    
+    /*Style the author name*/
+    p.author-name,  {
+        letter-spacing: -.01em;
+        line-height: 1.15;
+    }
+
+    p.author-name a {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+        color: rgba(255,255,255,.75);
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+    
+    .center-horizontally {
+    	margin: auto;
+        display: block;
+    }
+    
+    #github-sponsors-iframe{
+        height: 94px;
+        border-radius: 13px;
+    }
+    
+    @media only screen and (max-width: 763px) {
+        #github-sponsors-iframe{
+			height: 130px;
+        }
+    }
+    
+    @media only screen and (max-width: 552px) {
+        #github-sponsors-iframe{
+			height: 170px;
+        }
+    }
+    @media only screen and (max-width: 347px) {
+        #github-sponsors-iframe{
+			height: 200px;
+        }
+    }
+    @media only screen and (max-width: 330px) {
+        #github-sponsors-iframe{
+			height: 229px;
+        }
+    }
+    
+    /*Fix Links*/
+    .link {
+    	color: #6BA5FF;
+        text-decoration: underline;
+    }
+    
+    /*Center custom videos*/
+    video {
+    	margin: auto;
+        margin-top: 30px;
+    }
+</style><style integrity="sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=">:root {--ghost-accent-color: #2e2eb8;}</style>
+
+</head>
+<body class="post-template tag-privacy tag-no-root tag-vpn tag-how-to">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head has-cover">
+        <nav class="gh-head-inner inner gh-container">
+
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="https://itsignacioportal.github.io">
+                        ItsIgnacioPortal&#x27;s Blog
+                </a>
+                <a class="gh-burger" role="button" aria-label="Menu button">
+                    <div class="gh-burger-box">
+                        <div class="gh-burger-inner"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://itsignacioportal.github.io/">Home</a></li>
+    <li class="nav-about"><a href="https://itsignacioportal.github.io/about/">About</a></li>
+    <li class="nav-privacy-policy"><a href="https://itsignacioportal.github.io/privacy-policy/">Privacy Policy</a></li>
+</ul>
+
+            </div>
+            <div class="gh-head-actions">
+                <div class="gh-social">
+                </div>
+
+                    <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-content">
+        
+
+
+<main id="site-main" class="site-main">
+    <article class="article post tag-privacy tag-no-root tag-vpn tag-how-to no-image ">
+
+        <header class="article-header gh-canvas">
+
+            <section class="article-tag">
+                <a href="https://itsignacioportal.github.io/tag/privacy/">Privacy</a>
+            </section>
+
+            <h1 class="article-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers (2025)</h1>
+
+
+            <div class="article-byline">
+                <section class="article-byline-content">
+                    <ul class="author-list">
+                        <li class="author-list-item">
+                            <a href="/author/ignacio/" class="author-avatar">
+                                <img class="author-profile-image" src="/content/images/size/w100/2025/06/Circle.png" alt="Ignacio J. Perez Portal" />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="article-byline-meta">
+                        <p class="author-name"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></p>
+                        <div class="byline-meta-content">
+                            <time class="byline-meta-date" datetime="2025-06-24">Jun 24, 2025</time>
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> 12 min read</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </header>
+
+        <section class="gh-content gh-canvas">
+            <p>✅ You're reading the latest version of this guide.</p><p>It's often considered impossible to use both a firewall and a VPN at the same time on android without root, mainly due to the fact that you can normally only connect to a single VPN at a time, and firewall apps require this “VPN slot” in order to capture all device traffic.</p><p>But by taking advantage of the <strong>Android Work Profile</strong>, it's actually possible to connect to two VPNs at the same time, allowing use of a firewall app and an actual VPN app at the simultaneously.</p><!--kg-card-begin: html--> <button type="button" class="collapsible">What is an Android "Work Profile"?</button>
+<div class="content gh-content"><!--kg-card-end: html--><h3 id="android-work-profiles">Android Work Profiles</h3><p>An android work profile is an independent environment from the main Android profile, where much of the personal data has a completely separate storage from the main one. Android work-profiles give apps their own storage for:</p><ul><li>SMS History</li><li>Call History</li><li>File Storage</li></ul><p>In theory, this would allow you to run two instances of the same app simultaneously, each with its own independent storage, facilitating the separation of work-related accounts and accounts for personal use.</p><p>The greatest benefit of android Work Profiles is that <strong>they enable the use of two VPNs simultaneously.</strong></p><p><a href="https://developer.android.com/work/managed-profiles">Official documentation for the Android work-profile.</a></p><!--kg-card-begin: html--></div><!--kg-card-end: html--><p><strong>Technical overview:</strong> To properly route all network traffic where it corresponds we're going to install InviziblePRO-BETA in the main profile, setup a work-profile using Insular, connect InviziblePRO-BETA to a SOCKS5 proxy managed by Sing-Box from the work-profile, and then setup ProtonVPN to manage all work-profile connections.</p><p>Below is a simplified flowchart that visualizes the entire setup.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/06/Firewall-and-VPN-diagram.webp" class="kg-image" alt loading="lazy" width="1278" height="726" srcset="https://itsignacioportal.github.io/content/images/size/w600/2025/06/Firewall-and-VPN-diagram.webp 600w, https://itsignacioportal.github.io/content/images/size/w1000/2025/06/Firewall-and-VPN-diagram.webp 1000w, https://itsignacioportal.github.io/content/images/2025/06/Firewall-and-VPN-diagram.webp 1278w" sizes="(min-width: 720px) 720px"><figcaption>Flowchart visualization.</figcaption></figure><p>This guide has been tested on Lineage OS v19 (Based on Android 12). The following security tests were ran through this setup: testing for IP address leaks, DNS leaks and UDP leaks. No issues were detected in this configuration. Additionally, this setup only uses free and open source software.</p><hr><h2 id="index">Index</h2><!--kg-card-begin: markdown--><ul>
+<li><a href="#alternative-solutions">Alternative solutions</a></li>
+<li><a href="#requirements">Requiremenets</a></li>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#getting-an-f-droid-client">Getting an F-Droid Client</a></li>
+<li><a href="#insular-or-shelter">Insular or Shelter?</a></li>
+<li><a href="#setup-inviziblepro-beta">Setup InviziblePRO BETA</a></li>
+<li><a href="#setup-sing-box">Setup Sing-Box</a></li>
+<li><a href="#inviziblepro-beta-socks5-proxy-setup">InviziblePRO BETA SOCKS5 Proxy Setup</a></li>
+<li><a href="#setup-the-real-vpn">Setup the real VPN</a></li>
+</ul>
+</li>
+<li><a href="#start-everything">Start everything</a></li>
+<li><a href="#verifying-everything-works">Verifying everything works</a></li>
+<li><a href="#hardening">Hardening</a></li>
+<li><a href="#faq">F.A.Q.</a>
+<ul>
+<li><a href="#where-do-i-install-apps">Where do I install apps?</a></li>
+<li><a href="#how-do-i-block-an-apps-internet-access">How do I block an app's internet access?</a></li>
+<li><a href="#how-do-i-setup-dns-filtering">How do I setup DNS filtering?</a></li>
+<li><a href="#how-do-i-update-sing-box-and-the-vpn-app">How do I update Sing-Box and the VPN app?</a></li>
+<li><a href="#how-do-i-exclude-an-app-from-the-vpn">How do I exclude an app from the VPN?</a></li>
+</ul>
+</li>
+</ul>
+<!--kg-card-end: markdown--><hr><h2 id="alternative-solutions">Alternative solutions</h2><p>Before arriving at this configuration, many alternative solutions were considered.</p><p><strong>Proposal #1:</strong> Instead of using a VPN app, just install any firewall app and connect to an external SOCKS5 proxy server. This would have the benefit of masking the source IP when interacting with the internet, and also not having to use so many apps simultanously. Encrypted DNS resolutions could be achieved by using the android built-in "Private DNS" feature, which uses DoH.</p><p><strong>Problem 1-A:</strong> The SOCKS5 protocol is not encrypted. All content is sent as-is from the SOCKS5 client to the SOCKS5 server. This would mean that network content such as insecure HTTP and DoH resolver addresses can still be intercepted by network intruders and ISPs.</p><p><strong>Problem 1-B: </strong>VPN providers offer just that, VPNs. To get a SOCKS5 proxy server that you can trust you'd need to set it up yourself, which would cause you to have recurring monthly costs, but only a portion of the benefits of a full-fledged VPN.</p><p></p><p><strong>Proposal #2:</strong> Don't use a dedicated firewall app. Instead just use regular VPN app, enable <em>Settings → Network and Internet → VPN → Your-VPN-Here → Block connections without VPN</em>, and then enable <a href="https://protonvpn.com/support/protonvpn-split-tunneling/">split-tunneling</a> on your VPN app. This would allow selective blocking of internet access to any android app, while also maintaining all of the benefits of a full VPN.</p><p><strong>Problem 2-A:</strong> No network-specific filtering. When using the split-tunneling configuration, either you allow full network access, or you block it completely. There is no fine-grained control. With a dedicated firewall app you could control LAN access, mobile data access, and wifi access separately. This fine-grained access allows you to restrict LAN access while still allowing WiFi access, preventing attackers (<a href="https://news.ycombinator.com/item?id=23246170">Like eBay or BeFF</a>) from scanning your local WiFi.</p><p><strong>Problem 2-B:</strong> DNS filtering. When using a VPN app you can not import DNS block-lists locally. Instead you must rely on DNS filtering done at the server-level, like how a <a href="https://pi-hole.net/">PiHole</a> operates. This has the disadvantage of forcing you to self-host an internet-facing server in order to have DNS filtering on your device, possibly incurring recurring monthly costs.</p><p>The setup described in this blogpost does not have any of the problems described above. Previous versions of this guide had UDP leaks, DNS leaks, proprietary software, and didn't allow LAN access with secure settings. In this version of the guide we have thwarted all of those problems, allowing for the best possible privacy-protecting rootless network setup.</p><h2 id="requirements">Requirements</h2><ul><li>Android 5.0+</li><li>Anywhere between 446.03 MB, up to 2500MB of available storage.</li><li>(Optional, hopefully) A computer and a cable to connect your phone to the computer.</li></ul><p>The reason so much storage space is required is because this setup needs 4 different applications and the Android work-profile. The Android work-profile occupies varying amounts of storage depending on the Android OS version.</p><h2 id="setup">Setup</h2><h3 id="getting-an-f-droid-client">Getting an F-Droid Client</h3><p>If you don't already have one, you should install an <a href="https://www.youtube.com/watch?v=JMSiTFLpUP8">f-droid client</a>. This guide uses the <a href="https://github.com/Droid-ify/client">Droid-ify</a> client (<a href="https://github.com/Droid-ify/client/releases/latest">download here</a>).</p><h3 id="insular-or-shelter">Insular or Shelter?</h3><p>The first step is setting up an Android Work Profile. Currently the only open-source options available are <a href="https://f-droid.org/packages/com.oasisfeng.island.fdroid/">Insular</a> (a fork of "Island") and <a href="https://play.google.com/store/apps/details?id=net.typeblog.shelter">Shelter</a>. Insular is preferred on Android 12 (or newer) devices.</p><p>Note that name of the open-source fork is "Insular", but in many places of the app the name still shows up as "Island". Do not be confused by this, the app you're using is Insular.</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Switching from Island to Insular</strong><br>If you were a user of "Island", you can switch to Insular by following these steps.<br><br>1. If you've setup the "Managed Mainland" feature, you must first rescind control of the mainland (Settings → Scoped settings → Mainland → Rescind). If you did not setup the "Managed Mainland" feature, skip to step 2.<br><br>2. Destroy the work-profile (Settings → Scoped settings → Island → Rescind) <br><br>3. Uninstall the Island app.<br><br>If you've already uninstalled Island but forgot to destroy the work-profile, you'll have to <a href="https://stackoverflow.com/a/63453017/11490425">delete Island's leftover work-profile manually using ADB</a>. Insular will <strong>not</strong> delete it for you.</div></div><p></p><p></p><p>In order to setup Insular you must first download the app and then follow the steps shown in-app.</p><p>Note from the Insular documentation:</p><blockquote>On most middle to high end Android devices released after 2016, Insular can be setup straightforward without hassle. But still on some devices, you may be notified during the setup with the error message “Sorry, your device (or ROM) is incompatible with Insular”, or other failures. In these cases, Insular could probably still work on your device if setup manually.</blockquote><blockquote>If you are prompted to encrypt your device during the setup, it means your device was not pre-encrypted out of box. If you don’t want device decryption (which may significantly degrade overall I/O performance on some low-end devices), it can be avoided with manual setup.</blockquote><p>You will need a PC and a cable to connect your phone to your PC if you follow <a href="https://secure-system.gitlab.io/Insular/setup.html#manual-setup-for-island">the manual setup guide</a>.</p><h5 id="optional-features">Optional Features</h5><p>These are some <strong>optional </strong>features you might be interested in. Although they're not necessary for this guide, they are very useful for boosting personal privacy.</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Freeze frequently woken apps.</strong><br>Insular allows you to <strong>freeze</strong> any app in the work profile. Freezing an app blocks all its background behaviors. You can even create a launch shortcut for quick de-freezing and launching.<br><br>If you enable <a href="https://secure-system.gitlab.io/Insular/#Insularmanaged-mainland">the "Managed mainland" feature</a>, you can also freeze apps that are in the main profile. <a href="https://secure-system.gitlab.io/Insular/setup.html#activate-managed-mainland">Link to setup guide</a>.</div></div><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Give apps fake permissions</strong>. <br><a href="https://appops.rikka.app/">Rikka's AppOps</a> allows you to set some app's permissions to "ignored", which causes apps to believe they've been granted a permission, when in reality, if they try to use said permission they won't get any data. AppOps has work-profile support.</div></div><h3 id="setup-inviziblepro-beta">Setup InviziblePRO BETA</h3><p>First make sure you have enabled the Izzy-on-Droid f-droid repo in Droid-ify. To do that simply open the app, tap the three dots icon on the top-right corner, then tap on "Repositories". There you can enable the Izzy-on-Droid repository. You can then download the <em>InviziblePRO BETA</em> app from this link: <a href="https://apt.izzysoft.de/fdroid/index/apk/pan.alexander.tordnscrypt">https://apt.izzysoft.de/fdroid/index/apk/pan.alexander.tordnscrypt</a>, or by looking up "<em>InviZible Pro **BETA**</em>" in droid-ify.</p><p>Once you've installed invizible you must open the app, accept the EULA, and then disable "Hide IP with TOR". Using device-wide TOR is likely to bring up many problems of services blocking TOR traffic.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/06/initial-settings.jpg" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of the main screen of Invizible. "Hide IP with TOR" is disabled.</figcaption></figure><p>Next we'll prevent DNS leaks from happening by enabling the setting at <em>Sidebar → Fast Settings → Prevent DNS leaks. </em>We'll also disable the <em>"Route All traffic through Tor"</em> setting.</p><!--kg-card-begin: html--><video autoplay loop muted playsinline disablepictureinpicture>
+  <source src="https://itsignacioportal.github.io/assets/firewall-and-vpn-without-root-on-android-2025/fast-settings-video.webm" type="video/webm">
+</video><!--kg-card-end: html--><p>Now comes the DNSCrypt settings. We must verify that DNSCrypt queries are being sent through the SOCKS5 Proxy by going to <em>Sidebar → DNSCrypt Settings</em> and verifying that "Outbound proxy" is enabled, and with a <em>Proxy port</em> of "5353" Also make sure to <strong>disable</strong> <em>Sidebar → DNSCrypt Settings → Force TCP. </em>This will increase the performance of DNSCrypt.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/06/dnscrypt-settings.png" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of Invizible DNSCrypt settings. Force TCP is disabled, and outbound proxy is enabled.</figcaption></figure><h3 id="setup-sing-box">Setup Sing-Box</h3><blockquote>Sing-box is a fast, customizable and universal proxy platform that can be used to create network proxy servers, clients and transparent proxies. This app allows users to manage and use local and remote Sing-box profiles and provides platform specific feature implementations such as the TUN transparent proxy implementation through the Android VPN Service.</blockquote><p>Sing-box needs to be installed in the work-profile. The best way of doing this is to install an f-droid client in the work-profile, and then install Sing-box from said f-droid client. This ensures that you're always using an up-to-date version of Sing-box.</p><p>We'll install the same F-Droid client app in both profiles. Here's how you can clone an app from your main-profile into your work-profile:</p><ol><li>Open Insular.</li><li>Search for the app you want to clone.</li><li>Tap on the three dots, and then on "Clone".</li></ol><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_clone-app.jpg" class="kg-image" alt loading="lazy" width="158" height="341"><figcaption>Screenshot of Insular with an app selected, highlighting the option "Clone" which is used to clone the selected app into the work-profile.</figcaption></figure><p>If you have Shizuku installed, you will be presented with an additional menu. There, you must select "Island":</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_clone-app_options.jpg" class="kg-image" alt loading="lazy" width="324" height="199"><figcaption>Screenshot of a pop-up menu in Insular. The options are "via Shizuku", "via Play Store" and "Clone app to Island".</figcaption></figure><p>Then, in the main menu of Insular go to the Island tab, select your f-droid client from the list of apps, and then open it:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_opening-fdroid-1.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of insular showing how to open the F-Droid client that's installed in the work-profile.</figcaption></figure><p>Then open the f-droid client, install "Sing-box" and open it. </p><p>In Sing-box you'll need to create a new "profile":</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_profiles-menu.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Sing-Box screenshot, first highlighting the profiles button, then the create button.</figcaption></figure><p>In this menu, select "Create Manually":</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_profiles-menu_profile-creation-options.jpg" class="kg-image" alt loading="lazy" width="323" height="186"><figcaption>Screenshot of Sing-box, with the "Create Manually" option highlighted.</figcaption></figure><p>Give it the name "SOCKS5 Proxy for InviziblePRO". Leave "type" as "Local" and "Source" as "Create New", then press <em>Create</em>.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/Screenshot_20250708-164248.jpg" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of Sing-Box in the profile creation screen.</figcaption></figure><p>Now tap on the profile you've just created, and then on "Edit Content". In there, you must add this text:</p><!--kg-card-begin: markdown--><pre><code class="language-json">{
+    &quot;outbounds&quot;:
+    [
+        {
+            &quot;type&quot;: &quot;direct&quot;,
+            &quot;tag&quot;: &quot;direct-out&quot;
+        }
+    ],
+    &quot;inbounds&quot;:
+    [
+        {
+            &quot;type&quot;: &quot;socks&quot;,
+            &quot;tag&quot;: &quot;socks-in&quot;,
+            &quot;listen&quot;: &quot;127.0.0.1&quot;,
+            &quot;listen_port&quot;: 5353
+        }
+    ]
+}
+</code></pre>
+<!--kg-card-end: markdown--><h3 id="inviziblepro-beta-socks5-proxy-setup">InviziblePRO BETA SOCKS5 Proxy Setup</h3><p>Now we'll setup the connection between InviziblePRO BETA and Sing-Box. First you must make sure that the Sing-Box socks5 proxy is activated. To do this simply go to the dashboard section of Sing-Box, and press the play button.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/Sing-Box_Start-socks5-proxy.jpg" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of Sing-Box, in the dashboard screen. The play button is highlighted.</figcaption></figure><p>Now open Invizible and go to <em>Sidebar → Common Settings → Use socks5 proxy. </em>There, leave “Proxy server” as “127.0.0.1” and set “Proxy port” to 5353. Also make sure to enable all of these settings in that screen:</p><ul><li>Use proxy for apps that bypass Tor.</li><li>Use proxy for DNSCrypt.</li><li>Use proxy fr Tor.</li><li>Use proxy for Purple I2P.</li></ul><p>It should look like this.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/Invizible_socks5-proxy-settings-2.png" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of the SOCKS5 Proxy setup screen in Invisible.</figcaption></figure><p>One last thing we must do in this screen, is exclude both Sing-Box, and the VPN app we installed. Press the “Exclude applications” button, and enable exclusion for sing-box and for your VPN app. If they're not on the list, then clone singbox and your VPN app into the main profile, the same way we cloned the f-droid client into the work profile.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/invizible_socks5-proxy_excluded-apps-1.png" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of Invisible in the exclude applications menu, Sing-Box and Proton VPN are highlighted.</figcaption></figure><h3 id="setup-the-real-vpn">Setup the real VPN</h3><p>Once that's all been setup, all that is left is to install a VPN app in the work profile. You can use the same f-droid client you used for Sing-box to look for a good VPN. Both ProtonVPN and Mullvad VPN are available on f-droid.</p><h2 id="start-everything">Start everything</h2><p>The final step of this guide is to start the apps you've configured in the following order:</p><ol><li>Start the VPN</li><li>Start Sing-box and hit play on the profile you've created ("SOCKS5 Proxy for InviziblePRO").</li><li>Start InviziblePRO.</li></ol><p>After starting the VPN, if you did everything right, you should see some traffic starting to pop up on your VPN app:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/protonvpn-1.jpg" class="kg-image" alt loading="lazy" width="294" height="574"><figcaption>Screenshot of Proton VPN showing incoming and outgoing traffic.</figcaption></figure><p>You should also see some traffic flowing through the SOCKS5 Proxy. If no traffic is going through the SOCKS5 Proxy, you may have setup something wrong, or you may need to restart your device.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/Traffic-flow-1.png" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of the Android notifications, showing traffic flowing through Invisible, Proton VPN, and Sing-Box.</figcaption></figure><h2 id="verifying-everything-works">Verifying everything works</h2><p>You can verify that the VPN is working by going to any of the following sites with the VPN activated:</p><ul><li><a href="https://whatismyipaddress.com">whatismyipaddress.com</a></li><li><a href="https://browserleaks.org/dns">browserleaks.org/dns</a></li><li><a href="https://whoer.net">whoer.net</a></li></ul><p></p><p>If you wish to <strong>disconnect </strong>from the VPN without dropping any packets, do this, in this specific order:</p><!--kg-card-begin: markdown--><ol>
+<li>Disable &quot;Setup SOCKS5 Proxy&quot; in RethinkDNS.</li>
+<li>Stop your VPN app and the SOCKS5 proxy on &quot;Sing-box&quot;.</li>
+<li>&quot;Deactivate&quot; the work profile:
+<ul>
+<li>If you have a notification from Insular, deactivate the work profile using the notification.</li>
+<li>If you don't have the notification (see: <a href="https://gitlab.com/secure-system/Insular/-/issues/69">Insular#69</a>) use the <a href="https://www.youtube.com/watch?v=aiEm9GMp5mI">quick-settings toggle</a>:</li>
+</ul>
+</li>
+</ol>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/quick-settings.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of the Android quick settings menu, with the "Work apps" toggle highlighted.</figcaption></figure><h2 id="hardening">Hardening</h2><p>The very last step in this guide is to harden the setup to prevent network leaks outside the firewall and VPN.</p><p>In the Android settings, go to VPN configuration and enable these settings for InviziblePRO and for the VPN you installed.</p><ul><li>Block network connections without VPN.</li><li>Always on VPN.</li></ul><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/VPN-Settings.png" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of the Android VPN settings.</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/VPN-Settings-Proton-VPN.png" class="kg-image" alt loading="lazy" width="325" height="370"><figcaption>Screenshot of the Android VPN settings, Proton VPN selected.</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/VPN-Settings-Invizible.png" class="kg-image" alt loading="lazy" width="325" height="393"><figcaption>Screenshot of the Android VPN settings, Invisible selected.</figcaption></figure><p>It's also recommended to go through the list of system apps in the work profile and disable any unwanted apps.</p><h1 id="faq">F.A.Q.</h1><h2 id="where-do-i-install-apps">Where do I install apps?</h2><p>All new apps must be installed <strong>in the main-profile (like you've always done)</strong>. Apps installed in the work-profile will completely bypass InviziblePRO and their requests won't be filtered, allowing them to load ads and upload analytics data.</p><p>If you want to isolate a privacy invasive app, do not use the work profile; instead, try <a href="https://github.com/twoyi/twoyi">Twoyi</a> (<a href="https://github.com/twoyi/twoyi/releases/">download here</a>) or <a href="https://f-droid.org/repo/io.va.exposed">VirtualXPosed</a>. For testing potentially dangerous apps (apps that may contain malware) you may use <a href="https://virustotal.com">VirusTotal</a>, or the <a href="https://developer.android.com/studio">Android-Studio Android-Emulator</a>.</p><h2 id="how-do-i-block-an-apps-internet-access">How do I block an app's internet access?</h2><p>Open Invizible and go to <em>Sidebar → Firewall</em>.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/Invizible_firewall.png" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of the Firewall screen in Invisible. A list of all installed apps is shown, with filtering for LAN, wifi, mobile data, and roaming.</figcaption></figure><h2 id="how-do-i-setup-dns-filtering">How do I setup DNS filtering?</h2><p>Open Invizible and go to <em>Sidebar → DNSCrypt Settings → Blacklist</em>.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/Invizible_dnscrypt-blacklist.png" class="kg-image" alt loading="lazy" width="325" height="325"><figcaption>Screenshot of the blacklist screen in Invisible. Three buttons are visible: Add remote list, add local list, and add rule.</figcaption></figure><h2 id="how-do-i-update-sing-box-and-the-vpn-app">How do I update Sing-Box and the VPN app?</h2><p>Open Insular, and then open the Droid-ify. Simply press the update button at the top to update all repositories, and then go to the “Updates” section.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2025/07/droid-ify_how-to-update.png" class="kg-image" alt loading="lazy" width="325" height="704"><figcaption>Screenshot of Droid-ify.</figcaption></figure><h2 id="how-do-i-exclude-an-app-from-the-vpn">How do I exclude an app from the VPN?</h2><p>To exclude an app from the VPN (but keep the Firewall rules and DNS filters active) go to <em>Sidebar → Common Settings → Use socks5 proxy</em> <em>→ Exclude Applications </em>and exclude the app you want from there.</p>
+        </section>
+
+        <div class="gh-canvas">
+            <div class="center-horizontally">
+                <br>
+                <hr id="tophr">
+                <h2>Having trouble?</h2>
+                <p>For a one-time USD$10 donation you can <b>get one-on-one troubleshooting support</b> for any of my guides/projects. I'll help you fix <b>any issue</b> you may have encountered regarding usage/deployment of one of my guides. More info in <a href="https://web.archive.org/web/20250314003845/https://github.com/sponsors/ItsIgnacioPortal?o=esc" class="link">my Github Sponsors profile</a>.</p>
+                <br>
+                <iframe class="center-horizontally" id="github-sponsors-iframe" src="/content/media/github-sponsor-card.html" title="Sponsor ItsIgnacioPortal" width="100%" data-ruffle-polyfilled=""></iframe>
+                <hr>
+            </div>
+        </div>
+        
+        <section class="article-comments gh-canvas">
+            <script src="https://giscus.app/client.js" data-repo="itsignacioportal/itsignacioportal.github.io" data-repo-id="R_kgDOHCib7w" data-category="Announcements" data-category-id="DIC_kwDOHCib784COZ-J" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script>
+        </section>
+        
+
+    </article>
+</main>
+
+
+    <section class="footer-cta ">
+        <div class="inner">
+            <h2>Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+
+            <aside class="read-more-wrap">
+                <div class="read-more inner">
+                        
+<article class="post-card post no-image ">
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/transparent-compression-on-android/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">Transparent data compression on Android</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>What is "transparent data compression"?Transparent data compression consists of storing data in a compressed format and automatically decompressing it whenever it needs to be accessed, making the whole process transparent to the user. Non-transparent methods of accessing compressed data may be cumbersome to the user, as they often require</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ignacio/" class="static-avatar">
+                        <img class="author-profile-image" src="/content/images/size/w100/2025/06/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
+                <span class="post-card-byline-date"><time datetime="2024-06-29">Jun 29, 2024</time> <span class="bull">&bull;</span> 2 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post no-image ">
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/firewall-and-vpn-without-root-on-android/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers.</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>IMPORTANT: This guide is now outdated. Use this one instead: https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/ Unlike the previous version of this guide, this setup has: No DNS leaks.No UDP leaks.Less battery usage.Only open-source software.RequirementsAndroid 5.0+Anywhere between 446.03 MB, up to 2500MB of available</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ignacio/" class="static-avatar">
+                        <img class="author-profile-image" src="/content/images/size/w100/2025/06/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
+                <span class="post-card-byline-date"><time datetime="2024-05-09">May 9, 2024</time> <span class="bull">&bull;</span> 8 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post no-image ">
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/how-to-setup-etesync-for-tasks-org-in-windows/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">How to setup Etesync for Tasks.org in Windows</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>In this blog I will explain how to set up etesync for local use (a server that will only be exposed to your trusted LAN). If you wish to setup etesync for it to be exposed to the internet, an advanced guide which uses nginx in WSL and internal port-forwarding</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ignacio/" class="static-avatar">
+                        <img class="author-profile-image" src="/content/images/size/w100/2025/06/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
+                <span class="post-card-byline-date"><time datetime="2023-02-09">Feb 9, 2023</time> <span class="bull">&bull;</span> 7 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="https://itsignacioportal.github.io">ItsIgnacioPortal&#x27;s Blog</a> &copy; 2025</section>
+            <section class="adsense-policy"><p>This site uses Google AdSense. <a href="https://www.google.com/policies/privacy/partners/">See How Google uses data when you use our partners’ sites or apps.</a></p></section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=d30f4e6105"></script>
+<script integrity="sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc=">
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+<script integrity="sha256-zZP2fMn+AftLcILRxH7nSMR78Jva5egmZLTEk+/cPks=">
+/**Javascript for the collapsable content button**/
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		if (this.innerHTML.startsWith("Open")){
+			//background-color: #eee;
+			this.innerHTML = this.innerHTML.replace("Open", "Close") 
+		} else {
+			this.innerHTML = this.innerHTML.replace("Close", "Open") 
+		}
+
+		var content = this.nextElementSibling;
+
+		if (content.style.maxHeight){
+			content.style.maxHeight = null;
+		} else {
+			content.style.maxHeight = content.scrollHeight + 36 + "px";
+		} 
+	});
+}
+</script>
+<script src="/assets/js/lib/prism.js"></script>
+
+</body>
+</html>

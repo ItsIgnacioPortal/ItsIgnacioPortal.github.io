@@ -17,7 +17,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=bdbec565a4" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=d30f4e6105" />
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://itsignacioportal.github.io/tag/netguard/" />
@@ -110,7 +110,14 @@
       overflow: hidden;
       transition: max-height 0.2s ease-out;
       background-color: #23262a;
-    } 
+    }
+    .gh-content.content h1, .gh-content.content h2, .gh-content.content h3, .gh-content.content h4 {
+      margin-top: 18px;
+    }
+    
+    .gh-content.content p:last-of-type{
+      margin-bottom: 18px;
+    }
     
     /**Fancy icons for the collapse button**/
     .collapsible:after {
@@ -278,6 +285,11 @@
         text-decoration: underline;
     }
     
+    /*Center custom videos*/
+    video {
+    	margin: auto;
+        margin-top: 30px;
+    }
 </style><style integrity="sha256-RBufHYkhlTjvT0xGDDl9lQHHZjgBPwPeklxvknfpBBA=">:root {--ghost-accent-color: #2e2eb8;}</style>
 
 </head>
@@ -351,7 +363,7 @@
                 <h2 class="post-card-title">How to use NetGuard + personalDNSFilter+ Any VPN, without root, without external self-hosted servers.</h2>
             </header>
             <div class="post-card-excerpt">
-                <p>Updated, and improved guide: https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/ Together, with the people over at the personalDNSfilter Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of work profiles. All of this started because I was trying to control Work-profile apps</p>
+                <p>IMPORTANT: This guide is now outdated. Use this one instead: https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/ Together, with the people over at the personalDNSfilter Telegram group, we've discovered a way to run multiple "VPN"s at the same time by taking advantage of work profiles. All of this started because I</p>
             </div>
         </a>
 
@@ -365,7 +377,7 @@
             </ul>
             <div class="post-card-byline-content">
                 <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
-                <span class="post-card-byline-date"><time datetime="2022-03-24">Mar 24, 2022</time> <span class="bull">&bull;</span> 14 min read</span>
+                <span class="post-card-byline-date"><time datetime="2022-03-24">Mar 24, 2022</time> <span class="bull">&bull;</span> 15 min read</span>
             </div>
         </footer>
 
@@ -402,7 +414,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=bdbec565a4"></script>
+<script src="/assets/built/casper.js?v=d30f4e6105"></script>
 <script integrity="sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc=">
 $(document).ready(function () {
     // Mobile Menu Trigger
@@ -434,7 +446,7 @@ for (i = 0; i < coll.length; i++) {
 		if (content.style.maxHeight){
 			content.style.maxHeight = null;
 		} else {
-			content.style.maxHeight = content.scrollHeight + "px";
+			content.style.maxHeight = content.scrollHeight + 36 + "px";
 		} 
 	});
 }
