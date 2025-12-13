@@ -16,7 +16,7 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=8821864672" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=f6ca4dd9a3" />
 
     <meta name="description" content="No root or external servers needed. Requirements: Android 5.0+, 
 446.03 MB of available storage, a computer and a cable to connect your phone." />
@@ -30,7 +30,7 @@
     <meta property="og:description" content="No root or external (self-hosted) servers needed" />
     <meta property="og:url" content="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/" />
     <meta property="article:published_time" content="2024-05-09T10:13:14.000Z" />
-    <meta property="article:modified_time" content="2025-07-12T06:44:20.000Z" />
+    <meta property="article:modified_time" content="2025-12-12T23:17:06.000Z" />
     <meta property="article:tag" content="Privacy" />
     <meta property="article:tag" content="Android" />
     <meta property="article:tag" content="No Root" />
@@ -75,9 +75,9 @@
     "headline": "How to: Firewall + VPN at the same time on Android.",
     "url": "https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android/",
     "datePublished": "2024-05-09T10:13:14.000Z",
-    "dateModified": "2025-07-12T06:44:20.000Z",
+    "dateModified": "2025-12-12T23:17:06.000Z",
     "keywords": "Privacy, Android, No Root, How to",
-    "description": "IMPORTANT: This guide is now outdated. Use this one instead: \nhttps://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/\n\nUnlike the previous version of this guide, this setup has:\n\n * No DNS leaks.\n * No UDP leaks.\n * Less battery usage.\n * Only open-source software.\n\nRequirements\n * Android 5.0+\n * Anywhere between 446.03 MB, up to 2500MB of available storage.\n * (Optional, hopefully) A computer and a cable to connect your phone to the\n   computer.\n\nThe reason so much st",
+    "description": "This update of the guide has no DNS leaks and no UDP leaks. Requires Android 5.0+",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://itsignacioportal.github.io/"
@@ -370,6 +370,7 @@
 
             <h1 class="article-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers.</h1>
 
+            <p class="article-excerpt">This update of the guide has no DNS leaks and no UDP leaks. Requires Android 5.0+</p>
 
             <div class="article-byline">
                 <section class="article-byline-content">
@@ -384,7 +385,7 @@
                         <p class="author-name"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></p>
                         <div class="byline-meta-content">
                             <time class="byline-meta-date" datetime="2024-05-09">May 9, 2024</time>
-                            <span class="byline-reading-time"><span class="bull">&bull;</span> 8 min read</span>
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> 9 min read</span>
                         </div>
                     </div>
                 </section>
@@ -393,7 +394,12 @@
         </header>
 
         <section class="gh-content gh-canvas">
-            <p>IMPORTANT: This guide is now outdated. Use this one instead: <a href="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/">https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2025/</a></p><p>Unlike the previous version of this guide, this setup has:</p><ul><li>No DNS leaks.</li><li>No UDP leaks.</li><li>Less battery usage.</li><li>Only open-source software.</li></ul><h2 id="requirements">Requirements</h2><ul><li>Android 5.0+</li><li>Anywhere between 446.03 MB, up to 2500MB of available storage.</li><li>(Optional, hopefully) A computer and a cable to connect your phone to the computer.</li></ul><p>The reason so much storage space is required is because this setup needs 4 different applications and the Android work-profile. The Android work-profile occupies varying amounts of storage depending on the Android OS version.</p><p>These are the core-steps of this guide: </p><ol><li>Install <strong>RethinkDNS</strong> in the Main Android Profile.</li><li>Create an Android work-profile using <strong>Insular</strong>.</li><li>Install <strong>Sing-box</strong> in the work-profile and configure it so that it can host a SOCKS5 proxy server.</li><li>Configure RethinkDNS so it forwards all requests through the Sing-box SOCKS5 proxy server.</li><li>Install a VPN app in the work-profile.</li><li>Start the Sing-box SOCKS5 Proxy.</li><li>Start RethinkDNS.</li><li>Start the VPN.</li></ol><p>This setup has been manually tested against DNS Leaks and UDP Leaks.</p><h1 id="setup">Setup</h1><h2 id="insular-or-shelter">Insular or Shelter?</h2><p>The first step is setting up an Android Work Profile. Currently the only open-source options available are <a href="https://f-droid.org/packages/com.oasisfeng.island.fdroid/">Insular</a> (a fork of "Island") and <a href="https://play.google.com/store/apps/details?id=net.typeblog.shelter">Shelter</a>. Use of "Insular" is preferred on Android 12 devices.</p><!--kg-card-begin: html--> <button type="button" class="collapsible">What is an Android "Work Profile"?</button>
+            <!--kg-card-begin: html--><style>
+div.alert-simple.alert-warning,div.alert-simple.alert-warning>strong{color:#ffb103}.alert-simple.alert-warning{border:1px solid rgba(241,142,6,.81);background-color:rgba(220,128,1,.16);box-shadow:0 0 2px #ffb103;text-shadow:2px 1px #00040a;padding:10px 15px}.warning{font-size:18px;color:#ffb40b;text-shadow:none}div.alert>span>svg{margin-right:4px}
+</style>
+<div class="alert fade alert-simple alert-warning show">
+<span aria-hidden="true"><svg style="max-height: 18px; fill: #ffb103;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C334.7 64 348.2 72.1 355.2 85L571.2 485C577.9 497.4 577.6 512.4 570.4 524.5C563.2 536.6 550.1 544 536 544L104 544C89.9 544 76.8 536.6 69.6 524.5C62.4 512.4 62.1 497.4 68.8 485L284.8 85C291.8 72.1 305.3 64 320 64zM320 416C302.3 416 288 430.3 288 448C288 465.7 302.3 480 320 480C337.7 480 352 465.7 352 448C352 430.3 337.7 416 320 416zM320 224C301.8 224 287.3 239.5 288.6 257.7L296 361.7C296.9 374.2 307.4 384 319.9 384C332.5 384 342.9 374.3 343.8 361.7L351.2 257.7C352.5 239.5 338.1 224 319.8 224z"/></svg></span><strong>Warning!</strong> This guide is severely outdated and it may contain inaccurate information. This is kept online exclusively for archival purposes. An updated guide is available <a href="https://itsignacioportal.github.io/firewall-and-vpn-without-root-on-android-2026">here</a>.
+</div><!--kg-card-end: html--><p>Unlike the previous version of this guide, this setup has:</p><ul><li>No DNS leaks.</li><li>No UDP leaks.</li><li>Less battery usage.</li><li>Only open-source software.</li></ul><h2 id="requirements">Requirements</h2><ul><li>Android 5.0+</li><li>Anywhere between 446.03 MB, up to 2500MB of available storage.</li><li>(Optional, hopefully) A computer and a cable to connect your phone to the computer.</li></ul><p>The reason so much storage space is required is because this setup needs 4 different applications and the Android work-profile. The Android work-profile occupies varying amounts of storage depending on the Android OS version.</p><p>These are the core-steps of this guide: </p><ol><li>Install <strong>RethinkDNS</strong> in the Main Android Profile.</li><li>Create an Android work-profile using <strong>Insular</strong>.</li><li>Install <strong>Sing-box</strong> in the work-profile and configure it so that it can host a SOCKS5 proxy server.</li><li>Configure RethinkDNS so it forwards all requests through the Sing-box SOCKS5 proxy server.</li><li>Install a VPN app in the work-profile.</li><li>Start the Sing-box SOCKS5 Proxy.</li><li>Start RethinkDNS.</li><li>Start the VPN.</li></ol><p>This setup has been manually tested against DNS Leaks and UDP Leaks.</p><h1 id="setup">Setup</h1><h2 id="insular-or-shelter">Insular or Shelter?</h2><p>The first step is setting up an Android Work Profile. Currently the only open-source options available are <a href="https://f-droid.org/packages/com.oasisfeng.island.fdroid/">Insular</a> (a fork of "Island") and <a href="https://play.google.com/store/apps/details?id=net.typeblog.shelter">Shelter</a>. Use of "Insular" is preferred on Android 12 devices.</p><!--kg-card-begin: html--> <button type="button" class="collapsible">What is an Android "Work Profile"?</button>
 <div class="content gh-content"><!--kg-card-end: html--><h3 id="android-work-profiles">Android Work Profiles</h3><p><a href="https://play.google.com/store/apps/details?id=com.oasisfeng.island">Island</a>, <a href="https://f-droid.org/packages/com.oasisfeng.island.fdroid/">Insular</a> and <a href="https://play.google.com/store/apps/details?id=net.typeblog.shelter&amp;amp;gl=US">Shelter</a> are apps which take advantage of <a href="https://developer.android.com/work/managed-profiles">Android's work-profile</a> in order to create a "sandbox"; This sandbox can give privacy invasive apps their own "private data pools" aka. their own storage for:</p><ul><li>SMS History</li><li>Call History</li><li>File Storage</li></ul><p>Having a separate profile on android also allows you to have multiple versions of a single app running simultaneously without modifying the app's APK. In contrast to other "parallel apps" apps, this approach allows us to easily get security updates from the playstore, as the app doesn't have to be modified and re-signed before installing it.</p><p>Another benefit of android Work Profiles are being able to hide one app from another app (For example, hiding Lucky Patcher from a game).</p><p>The greatest benefit of android Work Profiles is that <strong>they facilitate the use of two VPNs simultaneously.</strong></p><!--kg-card-begin: html--></div><!--kg-card-end: html--><p>Note that name of the open-source fork is "Insular", but in many places of the app the name still shows up as "Island". Do not be confused by this, the app you're using is Insular.</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Switching from Island to Insular</strong><br>1. If you've setup the "Managed Mainland" feature, you must first rescind control of the mainland (Settings &gt; Scoped settings &gt; Mainland &gt; Rescind).<br><br>2. Destroy the work-profile (Settings &gt; Scoped settings &gt; Island &gt; Rescind) <br><br>3. Uninstall the Island app.<br><br>If you've already uninstalled Island and forgot to destroy the work-profile, you'll have to <a href="https://stackoverflow.com/a/63453017/11490425">delete Island's leftover work-profile manually using ADB</a>. Insular will <strong>not</strong> delete it for you.</div></div><p></p><p>Steps to setup <strong>Insular</strong>:</p><p>1) Download the app: <a href="https://f-droid.org/packages/com.oasisfeng.island.fdroid/">https://f-droid.org/packages/com.oasisfeng.island.fdroid/</a></p><p>2) Launch the app and follow the setup instructions on-screen.</p><blockquote>On most middle to high end Android devices released after 2016, Insular can be setup straightforward without hassle. But still on some devices, you may be notified during the setup with the error message “Sorry, your device (or ROM) is incompatible with Insular”, or other failures. In these cases, Insular could probably still work on your device if setup manually.</blockquote><blockquote>If you are prompted to encrypt your device during the setup, it means your device was not pre-encrypted out of box. If you don’t want device decryption (which may significantly degrade overall I/O performance on some low-end devices), it can be avoided with manual setup.</blockquote><p>You will need a PC and a cable to connect your phone to your PC if you follow <a href="https://secure-system.gitlab.io/Insular/setup.html#manual-setup-for-island">the manual setup guide</a>.</p><h4 id="optional-features">Optional Features</h4><p>These are some <strong>optional </strong>features you might be interested in. Although they're not necessary for this guide, they are very useful for boosting personal privacy.</p><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Freeze frequently woken apps.</strong><br>Insular allows you to <strong>freeze</strong> any app in the work profile. Freezing an app blocks all its background behaviors. You can even create a launch shortcut for quick de-freezing and launching.<br><br>If you enable <a href="https://secure-system.gitlab.io/Insular/#Insularmanaged-mainland">the "Managed mainland" feature</a>, you can also freeze apps that are in the main profile. <a href="https://secure-system.gitlab.io/Insular/setup.html#activate-managed-mainland">Link to setup guide</a>.</div></div><div class="kg-card kg-callout-card kg-callout-card-grey"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text"><strong>TIP: Give apps fake permissions</strong>. <br><a href="https://appops.rikka.app/">Rikka's AppOps</a> allows you to set some app's permissions to "ignored", which causes apps to believe they've been granted a permission, when in reality, if they try to use said permission they won't get any data. AppOps has work-profile support.</div></div><h2 id="f-droid-client">F-Droid Client</h2><p>If you don't already have one, you should install an <a href="https://www.youtube.com/watch?v=JMSiTFLpUP8">f-droid client</a>. This guide uses the <a href="https://github.com/Droid-ify/client">Droid-ify</a> client (<a href="https://github.com/Droid-ify/client/releases/latest">download here</a>).</p><h2 id="rethinkdns">RethinkDNS</h2><p>Steps to setup RethinkDNS:</p><ol><li><a href="https://f-droid.org/packages/com.celzero.bravedns/">Install and open RethinkDNS</a>.</li><li>Setup the firewall (See: the "Apps" and "Firewall" sections in the app).</li><li>Setup the <a href="https://www.privacyguides.org/en/advanced/dns-overview/#what-is-dns">DNS</a> (See: the "DNS" section in the app). It's recommended that you use either DoT or ODoH.</li><li>Setup the DNS blocklists (See: the "DNS" section in the app). To enable the "On-device blocklists" feature, tap on the text that says "Disabled" in the menu that pops up, and then tap on "Download Blocklists". If the download appears to be stuck, in the DNS menu enable the "Use in-app downloader" feature.</li></ol><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/rethinkdns_inapp-downloader-1.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of RethinkDNS, in the DNS settings menu with the option "Use in-app downloader" highlighted.</figcaption></figure><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/rethinkdns_blocklists-success-1.jpg" class="kg-image" alt loading="lazy" width="324" height="102"><figcaption>Screenshot of a RethinkDNS notification that says that the blocklists download was successful.</figcaption></figure><p></p><h2 id="sing-box">Sing-box</h2><blockquote>Sing-box is a fast, customizable and universal proxy platform that can be used to create network proxy servers, clients and transparent proxies. This app allows users to manage and use local and remote Sing-box profiles and provides platform specific feature implementations such as the TUN transparent proxy implementation through the Android VpnService.</blockquote><p>Sing-box needs to be installed in the work-profile. The best way of doing this is to install an f-droid client in the work-profile, and then install Sing-box from said f-droid client. This ensures that you're always using an up-to-date version of Sing-box.</p><p>Here's how you can clone an app from your main-profile into your work-profile:</p><ol><li>Open Insular.</li><li>Search for the app you want to clone.</li><li>Tap on the three dots, and then on "Clone".</li></ol><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_clone-app.jpg" class="kg-image" alt loading="lazy" width="158" height="341"><figcaption>Screenshot of Insular with an app selected, highlighting the option "Clone" which is used to clone the selected app into the work-profile.</figcaption></figure><p>If you have Shizuku installed, you will be presented with an additional menu. There, you must select "Island":</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_clone-app_options.jpg" class="kg-image" alt loading="lazy" width="324" height="199"><figcaption>Screenshot of a pop-up menu in Insular. The options are "via Shizuku", "via Play Store" and "Clone app to Island".</figcaption></figure><p>Then, in the main menu of Insular go to the Island tab, select your f-droid client from the list of apps, and then open it:</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/Insular_opening-fdroid-1.jpg" class="kg-image" alt loading="lazy" width="324" height="702"><figcaption>Screenshot of insular showing how to open the F-Droid client that's installed in the work-profile.</figcaption></figure><p>Then open the f-droid client, install "Sing-box" and open it. </p><p>In Sing-box you'll need to create a new "profile":</p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_profiles-menu.jpg" class="kg-image" alt loading="lazy" width="324" height="702"></figure><p>In this menu, select "Create Manually":</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_profiles-menu_profile-creation-options.jpg" class="kg-image" alt loading="lazy" width="323" height="186"><figcaption>Screenshot of Sing-box, with the "Create Manually" option highlighted.</figcaption></figure><p></p><p>Give it the name "SOCKS5 Proxy for RethinkDNS". Leave "type" as "Local" and "Source" as "Create New". </p><figure class="kg-card kg-image-card"><img src="https://itsignacioportal.github.io/content/images/2024/05/sing-box_new-profile.jpg" class="kg-image" alt loading="lazy" width="324" height="702"></figure><p>Tap on the profile you've just created, and then on "Edit Content". In there, you must add this text:</p><!--kg-card-begin: markdown--><pre><code class="language-json">{
     &quot;outbounds&quot;:
     [
@@ -470,6 +476,38 @@
             <aside class="read-more-wrap">
                 <div class="read-more inner">
                         
+<article class="post-card post no-image ">
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/firewall-and-vpn-without-root-on-android-2026/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers (2026)</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>div.alert>span>svg{margin-right:4px}.alert-simple{padding:10px 15px} div.alert-simple.alert-success,div.alert-simple.alert-success>strong{color:#0ad406}.alert-simple.alert-success{border:1px solid rgba(36,241,6,.46);background-color:rgba(7,149,66,.12156862745098039);box-shadow:0 0 2px #259c08;text-shadow:2px 1px #00040a} Well done! You're reading the latest</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ignacio/" class="static-avatar">
+                        <img class="author-profile-image" src="/content/images/size/w100/2025/06/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
+                <span class="post-card-byline-date"><time datetime="2025-12-12">Dec 12, 2025</time> <span class="bull">&bull;</span> 10 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+                        
 <article class="post-card post ">
 
     <a class="post-card-image-link" href="/firewall-and-vpn-without-root-on-android-2025/">
@@ -492,7 +530,7 @@
                 <h2 class="post-card-title">How to use a Firewall and a VPN at the same time on Android without root, without external self-hosted servers (2025)</h2>
             </header>
             <div class="post-card-excerpt">
-                <p>✅ You're reading the latest version of this guide. It's often considered impossible to use both a firewall and a VPN at the same time on android without root, mainly due to the fact that you can normally only connect to a single VPN at a time, and firewall apps require</p>
+                <p>No root or external servers neeeded. Requirements: Android 5.0+,  446.03 MB of available storage, a computer and a cable to connect your phone.</p>
             </div>
         </a>
 
@@ -506,7 +544,7 @@
             </ul>
             <div class="post-card-byline-content">
                 <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
-                <span class="post-card-byline-date"><time datetime="2025-06-24">Jun 24, 2025</time> <span class="bull">&bull;</span> 12 min read</span>
+                <span class="post-card-byline-date"><time datetime="2025-06-24">Jun 24, 2025</time> <span class="bull">&bull;</span> 13 min read</span>
             </div>
         </footer>
 
@@ -545,38 +583,6 @@
     </div>
 
 </article>
-                        
-<article class="post-card post no-image ">
-
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="/how-to-setup-etesync-for-tasks-org-in-windows/">
-            <header class="post-card-header">
-                <h2 class="post-card-title">How to setup Etesync for Tasks.org in Windows</h2>
-            </header>
-            <div class="post-card-excerpt">
-                <p>In this blog I will explain how to set up etesync for local use (a server that will only be exposed to your trusted LAN). If you wish to setup etesync for it to be exposed to the internet, an advanced guide which uses nginx in WSL and internal port-forwarding</p>
-            </div>
-        </a>
-
-        <footer class="post-card-meta">
-            <ul class="author-list">
-                <li class="author-list-item">
-                    <a href="/author/ignacio/" class="static-avatar">
-                        <img class="author-profile-image" src="/content/images/size/w100/2025/06/Circle.png" alt="Ignacio J. Perez Portal" loading="lazy" />
-                    </a>
-                </li>
-            </ul>
-            <div class="post-card-byline-content">
-                <span class="post-card-byline-author"><a href="/author/ignacio/">Ignacio J. Perez Portal</a></span>
-                <span class="post-card-byline-date"><time datetime="2023-02-09">Feb 9, 2023</time> <span class="bull">&bull;</span> 7 min read</span>
-            </div>
-        </footer>
-
-    </div>
-
-</article>
                 </div>
             </aside>
 
@@ -602,7 +608,7 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
 </script>
-<script src="/assets/built/casper.js?v=8821864672"></script>
+<script src="/assets/built/casper.js?v=f6ca4dd9a3"></script>
 <script integrity="sha256-nBdAVpkwk/0Wiw/Vz/Io1fPEjdBDnAO8Ah4/c8ASAmc=">
 $(document).ready(function () {
     // Mobile Menu Trigger
